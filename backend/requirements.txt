@@ -1,0 +1,24 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+sqlalchemy==2.0.35
+geoalchemy2==0.15.2
+asyncpg==0.29.0
+psycopg2-binary==2.9.9
+
+# GIS
+geopandas==0.14.4
+shapely==2.0.6
+pyproj==3.6.1
+fiona==1.9.6
+
+# Matching / fuzzy
+rapidfuzz==3.9.6
+
+# V2-only, listed for reference (not installed by default in MVP)
+# scikit-learn==1.5.1
+
+# Dev / test
+pytest==8.3.3
+httpx==0.27.2
+ruff==0.6.9

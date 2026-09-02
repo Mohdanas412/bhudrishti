@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "charliermarsh.ruff",
+    "ms-azuretools.vscode-docker",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "dsznajder.es7-react-js-snippets",
+    "bradlc.vscode-tailwindcss",
+    "eamodio.gitlens",
+    "redhat.vscode-yaml",
+    "mtxr.sqltools",
+    "mtxr.sqltools-driver-pg",
+    "geojson.geojson-viewer",
+    "ms-vscode.vscode-json"
+  ]
+}

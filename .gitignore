@@ -1,0 +1,50 @@
+# --- Python / backend ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.sqlite3
+
+# --- Node / frontend ---
+node_modules/
+dist/
+build/
+.vite/
+*.tsbuildinfo
+npm-debug.log*
+
+# --- Docker ---
+*.pid
+
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Geodata (large / regenerable, keep out of git) ---
+*.shp
+*.shx
+*.dbf
+*.prj
+*.tif
+*.tiff
+!database/seed/*.geojson
+
+# --- IDE ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log

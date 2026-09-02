@@ -1,0 +1,9 @@
+{
+  "id": 47,
+  "type": "geometry",
+  "_type_enum": ["geometry", "area", "attribute", "missing_feature", "duplicate", "temporal"],
+  "severity": "medium",
+  "_severity_enum": ["informational", "low", "medium", "high"],
+  "feature_a": "P102",
+  "feature_b": "M458"
+}

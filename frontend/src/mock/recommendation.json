@@ -1,0 +1,13 @@
+{
+  "conflict_id": 47,
+  "action": "prefer_source_a",
+  "_action_enum": [
+    "prefer_source_a",
+    "prefer_source_b",
+    "merge_attributes",
+    "flag_real_world_change",
+    "manual_review_required"
+  ],
+  "confidence": 89,
+  "reason": "Higher source authority and stronger geometric evidence"
+}
