@@ -58,6 +58,9 @@ async def standardize_dataset(dataset_id: int, db: Session = Depends(get_db)):
     if result is None:
         raise HTTPException(status_code=404, detail="Dataset not found")
 
+    if "error" in result:
+        raise HTTPException(status_code=422, detail=result["error"])
+
     return {
         "dataset_id": dataset_id,
         "status": "standardized",
