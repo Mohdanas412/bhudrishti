@@ -7,7 +7,7 @@ from fastapi import UploadFile
 from rapidfuzz import fuzz, process
 from sqlalchemy.orm import Session
 
-from app.engines.gis import IngestError, ingest_dataset
+from app.engines.gis import IngestError, ingest_dataset, validate_dataset
 from app.models.dataset import Dataset
 from app.models.feature import Feature
 
@@ -60,33 +60,31 @@ def create_dataset(file: UploadFile, dataset_type: str, db: Session) -> Dataset:
 
 
 def validate_dataset_geometry(dataset_id: int, db: Session) -> dict:
+    """Run per-feature geometry validation on a dataset.
+
+    Thin wrapper around engines/gis.validate_dataset. The engine owns the
+    per-feature loop and the CRS/empty/invalid checks; this function only
+    loads the dataset row, persists the engine's verdict onto the row, and
+    returns the engine result in M3's existing response shape.
+
+    Side effects (unchanged from M3's original):
+      * Sets Dataset.crs (may be None if engine reported CRS_MISSING)
+      * Sets Dataset.feature_count
+      * Sets Dataset.status = "validated" or "invalid"
+    """
     dataset = db.query(Dataset).filter(Dataset.id == dataset_id).first()
 
     if dataset is None:
         return None
 
-    gdf = gpd.read_file(dataset.file_path)
+    result = validate_dataset(dataset.file_path)
 
-    issues = []
-    for idx, geom in enumerate(gdf.geometry):
-        if geom is None or geom.is_empty:
-            issues.append({"feature_index": idx, "reason": "Empty geometry"})
-        elif not geom.is_valid:
-            issues.append(
-                {
-                    "feature_index": idx,
-                    "reason": "Invalid geometry (e.g. self-intersection)",
-                }
-            )
-
-    is_valid = len(issues) == 0
-
-    dataset.crs = str(gdf.crs)
-    dataset.feature_count = len(gdf)
-    dataset.status = "validated" if is_valid else "invalid"
+    dataset.crs = result.crs
+    dataset.feature_count = result.feature_count
+    dataset.status = "validated" if result.valid else "invalid"
     db.commit()
 
-    return {"valid": is_valid, "issues": issues}
+    return {"valid": result.valid, "issues": result.issues}
 
 
 def standardize_dataset_ingest(dataset_id: int, db: Session) -> dict:
