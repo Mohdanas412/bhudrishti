@@ -7,6 +7,7 @@ from app.db.session import get_db
 from app.services.datasets import (
     create_dataset,
     standardize_dataset_fields,
+    standardize_dataset_ingest,
     validate_dataset_geometry,
 )
 
@@ -52,18 +53,27 @@ async def validate_dataset(dataset_id: int, db: Session = Depends(get_db)):
 
 @router.post("/{dataset_id}/standardize")
 async def standardize_dataset(dataset_id: int, db: Session = Depends(get_db)):
-    """Schema/CRS normalization. Delegates to engines/gis. Owner: M4."""
-    result = standardize_dataset_fields(dataset_id, db)
+    """CRS-normalize, compute coverage boundary (M4), then map fields to
+    canonical attributes and create Feature rows (M3). Owner: M3 + M4."""
+    ingest_result = standardize_dataset_ingest(dataset_id, db)
 
-    if result is None:
+    if ingest_result is None:
         raise HTTPException(status_code=404, detail="Dataset not found")
+    if "error" in ingest_result:
+        raise HTTPException(status_code=422, detail=ingest_result["error"])
 
-    if "error" in result:
-        raise HTTPException(status_code=422, detail=result["error"])
+    fields_result = standardize_dataset_fields(dataset_id, db)
+
+    if fields_result is None:
+        raise HTTPException(status_code=404, detail="Dataset not found")
+    if "error" in fields_result:
+        raise HTTPException(status_code=422, detail=fields_result["error"])
 
     return {
         "dataset_id": dataset_id,
         "status": "standardized",
-        "features_created": result.get("features_created"),
-        "unmapped_fields": result.get("unmapped_fields"),
+        "crs": ingest_result["crs"],
+        "feature_count": ingest_result["feature_count"],
+        "features_created": fields_result.get("features_created"),
+        "unmapped_fields": fields_result.get("unmapped_fields"),
     }

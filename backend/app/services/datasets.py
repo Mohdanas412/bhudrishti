@@ -7,6 +7,7 @@ from fastapi import UploadFile
 from rapidfuzz import fuzz, process
 from sqlalchemy.orm import Session
 
+from app.engines.gis import IngestError, ingest_dataset
 from app.models.dataset import Dataset
 from app.models.feature import Feature
 
@@ -86,6 +87,30 @@ def validate_dataset_geometry(dataset_id: int, db: Session) -> dict:
     db.commit()
 
     return {"valid": is_valid, "issues": issues}
+
+
+def standardize_dataset_ingest(dataset_id: int, db: Session) -> dict:
+    """CRS-normalize a dataset and compute its coverage boundary.
+
+    Delegates the actual transformation to engines/gis.ingestion so the engine
+    stays storage-agnostic (per backend/app/db/README.md). Owner: M4.
+    """
+    dataset = db.query(Dataset).filter(Dataset.id == dataset_id).first()
+
+    if dataset is None:
+        return None
+
+    try:
+        result = ingest_dataset(dataset.file_path)
+    except IngestError as exc:
+        return {"error": str(exc)}
+
+    dataset.crs = result.crs
+    dataset.feature_count = result.feature_count
+    dataset.coverage_boundary_geojson = json.dumps(result.coverage_geojson)
+    db.commit()
+
+    return {"crs": result.crs, "feature_count": result.feature_count}
 
 
 def _map_properties(properties: dict, synonym_dict: dict) -> tuple:
