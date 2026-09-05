@@ -1,12 +1,17 @@
-from fastapi import APIRouter, UploadFile
+from fastapi import APIRouter, Depends, UploadFile
+from sqlalchemy.orm import Session
+
+from app.db.session import get_db
+from app.services.datasets import create_dataset
 
 router = APIRouter()
 
 
 @router.post("")
-async def upload_dataset(file: UploadFile):
+async def upload_dataset(file: UploadFile, db: Session = Depends(get_db)):
     """Upload + register a dataset (GeoJSON/Shapefile/CSV). Owner: M3 + M4."""
-    return {"id": "mock-dataset-1", "filename": file.filename, "status": "registered"}
+    dataset = create_dataset(file, db)
+    return {"id": dataset.id, "filename": file.filename, "status": dataset.status}
 
 
 @router.post("/{dataset_id}/validate")
