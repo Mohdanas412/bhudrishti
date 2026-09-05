@@ -13,6 +13,7 @@ from app.db.base import Base
 from app.db.session import engine
 from app.models import (  # noqa: F401  # import so tables register before create_all
     dataset,
+    feature,
     source,
 )
 
