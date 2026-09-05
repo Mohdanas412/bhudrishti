@@ -1,8 +1,8 @@
 """
-Smoke tests for the standardize endpoint.
+Smoke tests for the datasets endpoints.
 
-Validates that POST /datasets/{id}/standardize wires through to engines/gis
-and returns the expected shape, plus 404 on missing dataset.
+Covers POST /datasets/{id}/validate and POST /datasets/{id}/standardize —
+both wire through to engines/gis.
 
 Run from backend/ directory: pytest tests/test_standardize_endpoint.py -v
 """
@@ -129,3 +129,55 @@ def test_standardize_422_for_missing_crs(tmp_path):
     r = client.post(f"/datasets/{dataset_id}/standardize")
     assert r.status_code == 422
     assert "CRS missing" in r.json()["detail"]
+
+
+# ---------------------------------------------------------------------------
+# /validate endpoint tests (Stage 2 — M4 validation engine)
+# ---------------------------------------------------------------------------
+
+
+def test_validate_happy_path():
+    """A clean dataset must validate as valid=True, with no issues, and
+    persist crs/feature_count/status='validated' on the dataset row."""
+    target = Path("uploads") / "sample.geojson"
+    shutil.copy(SAMPLE_GEOJSON, target)
+    dataset_id = _create_dataset_row("sample.geojson", str(target))
+
+    r = client.post(f"/datasets/{dataset_id}/validate")
+
+    assert r.status_code == 200, r.text
+    body = r.json()
+    assert body["valid"] is True
+    assert body["issues"] == []
+
+    # Side effect: status on the row is "validated"
+    db = SessionLocal()
+    try:
+        ds = db.query(Dataset).filter(Dataset.id == dataset_id).first()
+        assert ds.status == "validated"
+        assert ds.crs == "EPSG:4326"
+        assert ds.feature_count == 3
+    finally:
+        db.close()
+
+
+def test_validate_detects_empty_geometry():
+    """An empty-geom fixture must return valid=False with one EMPTY_GEOMETRY issue."""
+    target = Path("uploads") / "empty_geom.geojson"
+    shutil.copy(FIXTURES / "empty_geom.geojson", target)
+    dataset_id = _create_dataset_row("empty_geom.geojson", str(target))
+
+    r = client.post(f"/datasets/{dataset_id}/validate")
+
+    assert r.status_code == 200, r.text
+    body = r.json()
+    assert body["valid"] is False
+    assert len(body["issues"]) == 1
+    assert body["issues"][0]["code"] == "empty_geometry"
+    assert body["issues"][0]["feature_index"] == 0
+
+
+def test_validate_404_for_missing_dataset():
+    r = client.post("/datasets/99999/validate")
+    assert r.status_code == 404
+    assert r.json()["detail"] == "Dataset not found"
