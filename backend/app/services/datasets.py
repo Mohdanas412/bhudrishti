@@ -1,3 +1,4 @@
+import json
 import os
 import shutil
 
@@ -5,6 +6,7 @@ import geopandas as gpd
 from fastapi import UploadFile
 from sqlalchemy.orm import Session
 
+from app.engines.gis import IngestError, ingest_dataset
 from app.models.dataset import Dataset
 
 # Relative to cwd (backend/), per the db path convention
@@ -56,3 +58,36 @@ def validate_dataset_geometry(dataset_id: int, db: Session) -> dict:
     db.commit()
 
     return {"valid": is_valid, "issues": issues}
+
+
+def standardize_dataset(dataset_id: int, db: Session) -> dict:
+    """CRS-normalize a dataset and compute its coverage boundary.
+
+    Delegates the actual transformation to engines/gis.ingestion so the engine
+    stays storage-agnostic (per backend/app/db/README.md). This function is
+    the only place that touches the ORM in response to ingestion.
+    """
+    dataset = db.query(Dataset).filter(Dataset.id == dataset_id).first()
+
+    if dataset is None:
+        return None
+
+    try:
+        result = ingest_dataset(dataset.file_path)
+    except IngestError as exc:
+        # Engine-level failure (missing CRS, unreadable file). Surface as
+        # a structured error so the API layer can translate to 422.
+        return {"_error": "ingest_failed", "detail": str(exc)}
+
+    dataset.crs = result.crs
+    dataset.feature_count = result.feature_count
+    dataset.coverage_boundary_geojson = json.dumps(result.coverage_geojson)
+    dataset.status = "standardized"
+    db.commit()
+
+    return {
+        "dataset_id": dataset_id,
+        "status": dataset.status,
+        "crs": result.crs,
+        "feature_count": result.feature_count,
+    }
