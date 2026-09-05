@@ -98,3 +98,4 @@ CREATE INDEX idx_harmonized_geometry ON harmonized_features USING GIST (geometry
 
 ALTER TABLE datasets ADD COLUMN file_path TEXT NOT NULL DEFAULT '';
 ALTER TABLE datasets ADD COLUMN created_at TIMESTAMPTZ DEFAULT now();
+ALTER TABLE datasets ADD COLUMN dataset_type TEXT NOT NULL DEFAULT 'cadastral';
