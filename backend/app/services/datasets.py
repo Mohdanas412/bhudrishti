@@ -2,6 +2,7 @@ import json
 import os
 import shutil
 
+import geopandas as gpd
 from fastapi import UploadFile
 from rapidfuzz import fuzz, process
 from sqlalchemy.orm import Session
