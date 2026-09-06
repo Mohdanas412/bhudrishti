@@ -181,3 +181,105 @@ def test_validate_404_for_missing_dataset():
     r = client.post("/datasets/99999/validate")
     assert r.status_code == 404
     assert r.json()["detail"] == "Dataset not found"
+
+
+# ---------------------------------------------------------------------------
+# /repair endpoint tests (Stage 3 — M4 geometry repair engine)
+# ---------------------------------------------------------------------------
+
+
+def test_repair_happy_path():
+    """A clean dataset must repair to itself (no changes), status='repaired',
+    and the cleaned GDF must be persisted at uploads/standardized/{id}.geojson."""
+    target = Path("uploads") / "sample.geojson"
+    shutil.copy(SAMPLE_GEOJSON, target)
+    dataset_id = _create_dataset_row("sample.geojson", str(target))
+
+    r = client.post(f"/datasets/{dataset_id}/repair")
+
+    assert r.status_code == 200, r.text
+    body = r.json()
+    assert body["status"] == "repaired"
+    assert body["crs"] == "EPSG:4326"
+    assert body["feature_count"] == 3
+    assert body["dropped_count"] == 0
+    assert body["repaired_count"] == 0
+    assert body["issues"] == []
+    assert body["standardized_path"] == f"uploads/standardized/{dataset_id}.geojson"
+
+    # The cleaned GDF must be on disk
+    cleaned_path = Path("uploads") / "standardized" / f"{dataset_id}.geojson"
+    assert cleaned_path.exists()
+
+    # Status on the row is "repaired"
+    db = SessionLocal()
+    try:
+        ds = db.query(Dataset).filter(Dataset.id == dataset_id).first()
+        assert ds.status == "repaired"
+    finally:
+        db.close()
+
+
+def test_repair_fixes_bowtie_persists_cleaned_gdf():
+    """A bowtie fixture gets repaired in place; the persisted file is valid."""
+    target = Path("uploads") / "self_intersect.geojson"
+    shutil.copy(FIXTURES / "self_intersect.geojson", target)
+    dataset_id = _create_dataset_row("self_intersect.geojson", str(target))
+
+    r = client.post(f"/datasets/{dataset_id}/repair")
+
+    assert r.status_code == 200, r.text
+    body = r.json()
+    assert body["repaired_count"] == 1
+    assert body["repaired_indices"] == [0]
+    assert body["dropped_count"] == 0
+
+    # The persisted file is loadable and contains 1 valid feature
+    import geopandas as _gpd
+
+    cleaned = _gpd.read_file(body["standardized_path"])
+    assert len(cleaned) == 1
+    assert cleaned.geometry.iloc[0].is_valid
+
+
+def test_repair_404_for_missing_dataset():
+    r = client.post("/datasets/99999/repair")
+    assert r.status_code == 404
+    assert r.json()["detail"] == "Dataset not found"
+
+
+def test_repair_422_for_missing_crs():
+    """A CRS-missing dataset returns 422 (engine can't repair what it can't read)."""
+    import json
+
+    import geopandas as _gpd
+
+    bad = Path("uploads") / "no_crs.geojson"
+    bad.parent.mkdir(exist_ok=True)
+    bad.write_text(
+        json.dumps(
+            {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {"type": "Point", "coordinates": [0, 0]},
+                    }
+                ],
+            }
+        )
+    )
+
+    read_back = _gpd.read_file(str(bad))
+    if read_back.crs is not None:
+        pytest.skip(
+            f"Local geopandas {_gpd.__version__} defaults GeoJSON CRS to "
+            f"{read_back.crs}; cannot exercise the missing-CRS path here."
+        )
+
+    dataset_id = _create_dataset_row("no_crs.geojson", str(bad))
+
+    r = client.post(f"/datasets/{dataset_id}/repair")
+    assert r.status_code == 422
+    assert "CRS missing" in r.json()["detail"]

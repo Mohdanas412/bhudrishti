@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.services.datasets import (
     create_dataset,
+    repair_dataset_service,
     standardize_dataset_fields,
     standardize_dataset_ingest,
     validate_dataset_geometry,
@@ -77,3 +78,24 @@ async def standardize_dataset(dataset_id: int, db: Session = Depends(get_db)):
         "features_created": fields_result.get("features_created"),
         "unmapped_fields": fields_result.get("unmapped_fields"),
     }
+
+
+@router.post("/{dataset_id}/repair")
+async def repair_dataset_route(dataset_id: int, db: Session = Depends(get_db)):
+    """Repair invalid geometries in a dataset and persist the cleaned GDF.
+
+    Delegates to engines/gis.repair_dataset (M4). Self-intersections are
+    fixed in place via shapely.make_valid; empty or unrepairable geoms
+    are dropped. The cleaned GeoDataFrame is written to
+    uploads/standardized/{id}.geojson. Dataset.status is set to
+    'repaired'. Returns 422 for engine-level failures, 404 for missing id.
+    """
+    result = repair_dataset_service(dataset_id, db)
+
+    if result is None:
+        raise HTTPException(status_code=404, detail="Dataset not found")
+
+    if result.get("_error") in ("ingest_failed", "crs_missing", "file_unreadable"):
+        raise HTTPException(status_code=422, detail=result["detail"])
+
+    return result
