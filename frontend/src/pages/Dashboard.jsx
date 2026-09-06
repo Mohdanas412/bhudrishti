@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import dashboardData from "../mock/dashboard.json";
 import StatCard from "../components/StatCard";
 
@@ -29,9 +30,9 @@ export default function Dashboard() {
             <h3>GIS Map</h3>
             <span>Map module by M2</span>
           </div>
-          <div className="map-box">
-            <span>GIS Map Area</span>
-          </div>
+          <Link to="/map" className="map-box">
+            <span>Open GIS Map →</span>
+          </Link>
         </div>
 
         <div className="panel">
