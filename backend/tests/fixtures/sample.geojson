@@ -1,0 +1,51 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"feature_id": "P001", "land_use": "residential"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [77.2090, 28.6139],
+          [77.2095, 28.6139],
+          [77.2095, 28.6143],
+          [77.2090, 28.6143],
+          [77.2090, 28.6139]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"feature_id": "P002", "land_use": "commercial"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [77.2100, 28.6140],
+          [77.2106, 28.6140],
+          [77.2106, 28.6145],
+          [77.2100, 28.6145],
+          [77.2100, 28.6140]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"feature_id": "P003", "land_use": "residential"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [77.2110, 28.6148],
+          [77.2114, 28.6148],
+          [77.2114, 28.6151],
+          [77.2110, 28.6151],
+          [77.2110, 28.6148]
+        ]]
+      }
+    }
+  ]
+}
