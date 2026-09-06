@@ -34,3 +34,5 @@ Read **CONTRIBUTING.md** first (branching + PR rules), then jump to your folder:
 | M6 — Database + QA | `database/`, `backend/tests` | `database/schema.sql` |
 
 Nobody waits on anybody: contracts in `docs/contracts/` are frozen on Day 1. M3 returns mock/hard-coded responses until M4/M5 land real logic.
+## Team Contribution 
+Rishi - Project Setup and Development
