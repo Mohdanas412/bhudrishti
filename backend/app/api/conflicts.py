@@ -1,18 +1,16 @@
 from fastapi import APIRouter
 
+from app.engines.reconciliation import build_conflict
+
 router = APIRouter()
 
 
 @router.post("/detect")
 async def detect_conflicts():
     """Run conflict detection on matches. Delegates to engines/matching. Owner: M5."""
-    return [
-        {"id": 47, "type": "geometry", "severity": "medium", "feature_a": "P102", "feature_b": "M458"}
-    ]
+    return [build_conflict(47, "P102", "M458", "geometry", "medium")]
 
 
 @router.get("")
 async def list_conflicts():
-    return [
-        {"id": 47, "type": "geometry", "severity": "medium", "feature_a": "P102", "feature_b": "M458"}
-    ]
+    return [build_conflict(47, "P102", "M458", "geometry", "medium")]
