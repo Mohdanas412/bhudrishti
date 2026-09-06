@@ -1,6 +1,8 @@
 from enum import Enum
 from fastapi import APIRouter
 
+from app.engines.reconciliation import build_conflict, recommend_conflict
+
 router = APIRouter()
 
 
@@ -19,23 +21,17 @@ class RecommendationAction(str, Enum):
 @router.post("/run")
 async def run_reconciliation():
     """Generate explainable recommendations from conflicts. Delegates to engines/reconciliation. Owner: M5."""
+    conflict = build_conflict(47, "P102", "M458", "geometry", "medium")
     return [
-        {
-            "conflict_id": 47,
-            "action": RecommendationAction.PREFER_SOURCE_A.value,
-            "confidence": 89,
-            "reason": "Higher source authority and stronger geometric evidence",
-        }
+        recommend_conflict(
+            conflict,
+            {"source_reliability": 95},
+            {"source_reliability": 80},
+            match_score=89,
+        )
     ]
 
 
 @router.get("")
 async def list_recommendations():
-    return [
-        {
-            "conflict_id": 47,
-            "action": RecommendationAction.PREFER_SOURCE_A.value,
-            "confidence": 89,
-            "reason": "Higher source authority and stronger geometric evidence",
-        }
-    ]
+    return await run_reconciliation()
