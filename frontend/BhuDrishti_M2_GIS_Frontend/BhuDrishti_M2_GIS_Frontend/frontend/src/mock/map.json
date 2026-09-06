@@ -1,0 +1,31 @@
+{
+  "features": [
+    {
+      "id": "P-1001",
+      "name": "Parcel A",
+      "status": "Verified",
+      "area": "2.4 ha",
+      "type": "parcel",
+      "latitude": 28.6139,
+      "longitude": 77.209
+    },
+    {
+      "id": "P-1002",
+      "name": "Parcel B",
+      "status": "Under Review",
+      "area": "1.8 ha",
+      "type": "parcel",
+      "latitude": 19.076,
+      "longitude": 72.8777
+    },
+    {
+      "id": "I-2001",
+      "name": "Boundary Issue",
+      "status": "Issue Detected",
+      "area": "0.7 ha",
+      "type": "issue",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    }
+  ]
+}
