@@ -1,0 +1,67 @@
+{
+  "_note": "Dataset endpoints (upload/validate/standardize) had no frozen contract file until now — added retroactively during M3 Stage 5, based on real verified Swagger output, not the original playbook's Section 14 examples (which never covered Dataset). TEAM COORDINATION REQUIRED if this shape changes.",
+
+  "upload_response": {
+    "id": 8,
+    "filename": "good_parcel.geojson",
+    "status": "uploaded",
+    "dataset_type": "cadastral",
+    "_dataset_type_enum": ["cadastral", "municipal", "building"],
+    "_status_enum_note": "status is always 'uploaded' on this response — later stages (validate/standardize) transition it further, see below"
+  },
+
+  "upload_query_param": {
+    "dataset_type": "required, one of _dataset_type_enum above, passed as a query string param (not in the multipart body)"
+  },
+
+  "validate_response": {
+    "dataset_id": 8,
+    "valid": true,
+    "issues": []
+  },
+
+  "validate_response_with_issues_example": {
+    "dataset_id": 4,
+    "valid": false,
+    "issues": [
+      {
+        "feature_index": 0,
+        "reason": "Invalid geometry (e.g. self-intersection)"
+      }
+    ],
+    "_issue_reason_enum": [
+      "Empty geometry",
+      "Invalid geometry (e.g. self-intersection)"
+    ]
+  },
+
+  "validate_not_found_response": {
+    "_http_status": 404,
+    "detail": "Dataset not found"
+  },
+
+  "standardize_response_success": {
+    "dataset_id": 8,
+    "status": "standardized",
+    "features_created": 1,
+    "unmapped_fields": []
+  },
+
+  "standardize_response_unmapped_fields_example": {
+    "_note": "unmapped_fields is a list of per-feature objects when some raw fields could not be fuzzy-matched, empty list when everything mapped cleanly",
+    "unmapped_fields": [
+      { "feature_index": 0, "unmapped_fields": ["some_raw_field_name"] }
+    ]
+  },
+
+  "standardize_not_found_response": {
+    "_http_status": 404,
+    "detail": "Dataset not found"
+  },
+
+  "standardize_unsupported_dataset_type_response": {
+    "_http_status": 422,
+    "detail": "No field-mapping dictionary yet for dataset_type 'municipal'",
+    "_note": "Fires when dataset_type has no entry in DATASET_TYPE_SYNONYMS yet (currently only 'cadastral' is implemented; 'municipal' and 'building' are not). Fixed in M3 Stage 5 — previously this case silently returned a fake 200 with features_created/unmapped_fields both null."
+  }
+}

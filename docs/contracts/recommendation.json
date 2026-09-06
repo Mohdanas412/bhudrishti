@@ -1,13 +1,16 @@
 {
   "conflict_id": 47,
-  "action": "prefer_source_a",
+  "action": "prefer_source",
   "_action_enum": [
-    "prefer_source_a",
-    "prefer_source_b",
+    "prefer_source",
     "merge_attributes",
     "flag_real_world_change",
-    "manual_review_required"
+    "flag_duplicate",
+    "manual_review_required",
+    "no_action_needed"
   ],
+  "preferred_source_id": 1,
+  "_preferred_source_id_note": "Only present when action = 'prefer_source'. References sources.id from the DB schema (integer), not a source name string.",
   "confidence": 89,
   "reason": "Higher source authority and stronger geometric evidence"
 }
