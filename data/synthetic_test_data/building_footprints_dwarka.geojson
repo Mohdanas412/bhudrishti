@@ -1,0 +1,78 @@
+{
+  "type": "FeatureCollection",
+  "name": "building_footprints_dwarka",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "parcel_id": "BLD-101",
+        "building_type": "Residential Multi-family",
+        "status": "Occupied",
+        "authority": "Delhi Urban Shelter & Building Registry",
+        "accuracy": 0.88
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.2087, 28.6136],
+            [77.2093, 28.6136],
+            [77.2093, 28.6141],
+            [77.2087, 28.6141],
+            [77.2087, 28.6136]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "parcel_id": "BLD-102",
+        "building_type": "Residential Villa",
+        "status": "Under Construction",
+        "authority": "Delhi Urban Shelter & Building Registry",
+        "accuracy": 0.88
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.2098, 28.6136],
+            [77.2106, 28.6136],
+            [77.2106, 28.6142],
+            [77.2098, 28.6142],
+            [77.2098, 28.6136]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "parcel_id": "BLD-103",
+        "building_type": "Commercial Plaza",
+        "status": "Completed",
+        "authority": "Delhi Urban Shelter & Building Registry",
+        "accuracy": 0.88
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.2112, 28.6137],
+            [77.2120, 28.6137],
+            [77.2120, 28.6144],
+            [77.2112, 28.6144],
+            [77.2112, 28.6137]
+          ]
+        ]
+      }
+    }
+  ]
+}
