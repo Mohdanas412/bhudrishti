@@ -1,0 +1,50 @@
+{
+  "stats": [
+    {
+      "title": "Total Parcels",
+      "value": "12,480",
+      "change": "+8.2%"
+    },
+    {
+      "title": "Verified Parcels",
+      "value": "9,840",
+      "change": "+12.5%"
+    },
+    {
+      "title": "Pending Review",
+      "value": "1,240",
+      "change": "-4.1%"
+    },
+    {
+      "title": "Issues Detected",
+      "value": "326",
+      "change": "+2.8%"
+    }
+  ],
+  "recentActivity": [
+    {
+      "id": 1,
+      "action": "Parcel verified",
+      "location": "Village A",
+      "status": "Verified"
+    },
+    {
+      "id": 2,
+      "action": "Issue detected",
+      "location": "Village B",
+      "status": "Review"
+    },
+    {
+      "id": 3,
+      "action": "Parcel updated",
+      "location": "Village C",
+      "status": "Updated"
+    },
+    {
+      "id": 4,
+      "action": "New parcel added",
+      "location": "Village D",
+      "status": "New"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+/*
+ * BhuDrishti — GIS Explorer Map Control Positioning
+ *
+ * Control zones (no overlaps):
+ *   TOP-LEFT   (12, 12)  — Layer switcher panel
+ *   TOP-RIGHT  (12, 12)  — MapLibre NavigationControl (default)
+ *   RIGHT      (12, 64)  — Feature details drawer (below nav controls)
+ *   BOTTOM-RIGHT(12, 12) — Legend
+ *
+ * The Khasra/parcel search modal renders from the top toolbar (above map),
+ * not as a map overlay, so it never collides with any in-map control.
+ */
+
+/* ── Layer switcher ─────────────────────────────── */
+.map-layer-control {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 200;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid var(--border-subtle, #e2e8f0);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+  padding: 12px 14px;
+  min-width: 168px;
+}
+
+.map-layer-control h3 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.layer-option {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 7px 0;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #172033;
+  cursor: pointer;
+}
+
+.layer-option input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #2563eb;
+}
+
+/* ── Legend ─────────────────────────────────────── */
+.map-legend {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 200;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid var(--border-subtle, #e2e8f0);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+  padding: 10px 14px;
+  min-width: 148px;
+}
+
+.map-legend h3 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 0;
+  font-size: 12px;
+  color: #172033;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-dot.verified { background: #16a34a; }
+.legend-dot.review   { background: #d97706; }
+.legend-dot.issue    { background: #dc2626; }
+
+/* ── Feature details panel — right side, below nav controls ── */
+.feature-panel {
+  position: absolute;
+  top: 52px;   /* Clear MapLibre NavigationControl (~44px) */
+  right: 12px;
+  z-index: 200;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid var(--border-subtle, #e2e8f0);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+  width: 232px;
+  padding: 14px;
+}
+
+.feature-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.feature-panel-header h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #172033;
+}
+
+.feature-panel-header button {
+  border: 0;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  color: #94a3b8;
+  line-height: 1;
+  padding: 2px;
+}
+
+.feature-panel-header button:hover {
+  color: #172033;
+}
+
+.feature-details p {
+  font-size: 12.5px;
+  margin: 7px 0;
+  color: #172033;
+  line-height: 1.4;
+}
+
+.feature-details strong {
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 700px) {
+  .map-layer-control { min-width: 140px; }
+  .feature-panel     { width: 180px; }
+}
