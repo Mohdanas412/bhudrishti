@@ -1,6 +1,7 @@
 import os
+from collections.abc import Mapping
 from dataclasses import dataclass
-from typing import Any, Mapping
+from typing import Any
 
 from rapidfuzz.fuzz import ratio
 from shapely.geometry import shape
@@ -36,7 +37,7 @@ def _geometry(value: Any):
     if value is None:
         return None
     if not isinstance(value, Mapping):
-        raise ValueError("geometry must be a GeoJSON object")
+        raise TypeError("geometry must be a GeoJSON object")
     try:
         geometry = shape(value)
     except (AttributeError, KeyError, TypeError, ValueError) as exc:
@@ -106,7 +107,7 @@ def _reliability(first: Mapping[str, Any], second: Mapping[str, Any]) -> float:
 
 def score_features(first: Mapping[str, Any], second: Mapping[str, Any]) -> ScoreBreakdown:
     if not isinstance(first, Mapping) or not isinstance(second, Mapping):
-        raise ValueError("features must be mapping objects")
+        raise TypeError("features must be mapping objects")
     first_geometry = _geometry(first.get("geometry"))
     second_geometry = _geometry(second.get("geometry"))
     attributes, matched, differing = _attribute_similarity(first, second)

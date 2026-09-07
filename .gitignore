@@ -50,3 +50,7 @@ Thumbs.db
 *.log
 *.db
 backend/uploads/
+
+# --- Local runtime/demo files ---
+uploads/
+bhudrishti_fallback.db

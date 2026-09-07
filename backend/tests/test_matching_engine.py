@@ -1,5 +1,4 @@
 import pytest
-
 from app.engines.matching import classify_score, match_candidates, match_features
 
 SQUARE = {

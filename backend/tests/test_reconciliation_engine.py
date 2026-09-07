@@ -1,5 +1,9 @@
 from app.engines.matching import match_features
-from app.engines.reconciliation import build_conflict, detect_conflicts, recommend_conflict
+from app.engines.reconciliation import (
+    build_conflict,
+    detect_conflicts,
+    recommend_conflict,
+)
 
 
 def test_review_and_unmatched_matches_create_contract_conflicts():

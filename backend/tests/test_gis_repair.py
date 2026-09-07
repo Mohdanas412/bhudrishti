@@ -8,9 +8,8 @@ Run from backend/ directory: pytest tests/test_gis_repair.py -v
 import os
 from pathlib import Path
 
-from shapely.validation import make_valid
-
 from app.engines.gis import IssueCode, RepairResult, repair_dataset
+from shapely.validation import make_valid
 
 FIXTURES = Path(__file__).parent / "fixtures"
 

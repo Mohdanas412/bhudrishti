@@ -6,7 +6,11 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.services.datasets import (
     create_dataset,
+    get_dataset_by_id,
+    get_dataset_geojson,
+    list_datasets,
     repair_dataset_service,
+    seed_sample_sih_project,
     standardize_dataset_fields,
     standardize_dataset_ingest,
     validate_dataset_geometry,
@@ -98,4 +102,35 @@ async def repair_dataset_route(dataset_id: int, db: Session = Depends(get_db)):
     if result.get("_error") in ("ingest_failed", "crs_missing", "file_unreadable"):
         raise HTTPException(status_code=422, detail=result["detail"])
 
+    return result
+
+
+@router.get("")
+async def get_all_datasets(db: Session = Depends(get_db)):
+    """List all registered datasets with metadata, status, and feature counts."""
+    return list_datasets(db)
+
+
+@router.get("/{dataset_id}")
+async def get_single_dataset(dataset_id: int, db: Session = Depends(get_db)):
+    """Retrieve details for a single dataset."""
+    dataset = get_dataset_by_id(dataset_id, db)
+    if not dataset:
+        raise HTTPException(status_code=404, detail="Dataset not found")
+    return dataset
+
+
+@router.get("/{dataset_id}/geojson")
+async def get_dataset_features_geojson(dataset_id: int, db: Session = Depends(get_db)):
+    """Stream standardized or raw dataset features as GeoJSON FeatureCollection."""
+    geojson = get_dataset_geojson(dataset_id, db)
+    if geojson is None:
+        raise HTTPException(status_code=404, detail="Dataset not found")
+    return geojson
+
+
+@router.post("/sample-seed")
+async def seed_sample_datasets(db: Session = Depends(get_db)):
+    """Pre-seed canonical Cadastral, Municipal, and Building datasets for SIH demonstration."""
+    result = seed_sample_sih_project(db)
     return result

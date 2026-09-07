@@ -1,8 +1,10 @@
 from enum import Enum
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
 
-from app.engines.reconciliation import build_conflict, recommend_conflict
+from app.db.session import get_db
+from app.services.reconciliation_service import get_all_recommendations
 
 router = APIRouter()
 
@@ -61,16 +63,16 @@ def _to_contract_shape(
     return result
 
 
+
+
 @router.post("/run")
-async def run_reconciliation():
+async def run_reconciliation(db: Session = Depends(get_db)):
     """Generate explainable recommendations from conflicts. Delegates to engines/reconciliation. Owner: M5."""
-    conflict = build_conflict(47, "P102", "M458", "geometry", "medium")
-    feature_a = {"source_reliability": 95, "source_id": 1}
-    feature_b = {"source_reliability": 80, "source_id": 2}
-    recommendation = recommend_conflict(conflict, feature_a, feature_b, match_score=89)
-    return [_to_contract_shape(recommendation, feature_a, feature_b)]
+    return get_all_recommendations(db)
 
 
 @router.get("")
-async def list_recommendations():
-    return await run_reconciliation()
+async def list_recommendations(db: Session = Depends(get_db)):
+    """List recommendations for all detected conflicts."""
+    return get_all_recommendations(db)
+

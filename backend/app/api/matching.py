@@ -1,32 +1,20 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
 
-from app.engines.matching import match_features
+from app.db.session import get_db
+from app.services.reconciliation_service import get_all_matches
 
 router = APIRouter()
 
 
-DEMO_FEATURE_A = {
-    "id": "P102",
-    "geometry": {"type": "Point", "coordinates": [0, 0]},
-    "area": 100,
-    "land_use": "Residential",
-    "source_reliability": 90,
-}
-DEMO_FEATURE_B = {
-    "id": "M458",
-    "geometry": {"type": "Point", "coordinates": [0, 0]},
-    "area": 100,
-    "land_use": "Residential",
-    "source_reliability": 90,
-}
-
-
 @router.post("/run")
-async def run_matching():
-    """Generate candidate matches. Delegates to engines/matching. Owner: M5."""
-    return [match_features(DEMO_FEATURE_A, DEMO_FEATURE_B).to_contract()]
+async def run_matching(db: Session = Depends(get_db)):
+    """Generate candidate matches from loaded features or canonical fixtures. Delegates to engines/matching. Owner: M5."""
+    return get_all_matches(db)
 
 
 @router.get("")
-async def list_matches():
-    return [match_features(DEMO_FEATURE_A, DEMO_FEATURE_B).to_contract()]
+async def list_matches(db: Session = Depends(get_db)):
+    """List pairwise match results with confidence scores and evidence breakdowns."""
+    return get_all_matches(db)
+
