@@ -1,13 +1,14 @@
 import json
 from datetime import datetime, timezone
+from json import JSONDecodeError
 from typing import Any
+
 from sqlalchemy.orm import Session
 
 from app.engines.matching import match_candidates, match_features
-from app.engines.reconciliation import build_conflict, detect_conflicts, recommend_conflict
+from app.engines.reconciliation import build_conflict, recommend_conflict
 from app.models.dataset import Dataset
 from app.models.feature import Feature
-from app.models.source import Source
 
 REVIEWS_AUDIT: dict[int, dict[str, Any]] = {}
 
@@ -144,7 +145,7 @@ def _build_features_from_db(db: Session, dataset_type: str) -> list[dict[str, An
     for f in features:
         try:
             geom = json.loads(f.geometry_geojson)
-        except Exception:
+        except JSONDecodeError:
             continue
         rec = {
             "id": f.feature_id,

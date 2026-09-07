@@ -1,6 +1,7 @@
 import json
 import os
 import shutil
+from json import JSONDecodeError
 
 import geopandas as gpd
 from fastapi import UploadFile
@@ -320,7 +321,7 @@ def get_dataset_geojson(dataset_id: int, db: Session) -> dict | None:
         for f in features:
             try:
                 geom = json.loads(f.geometry_geojson)
-            except Exception:
+            except JSONDecodeError:
                 geom = None
             props = {
                 "id": f.id,
@@ -351,7 +352,7 @@ def get_dataset_geojson(dataset_id: int, db: Session) -> dict | None:
             if gdf.crs is not None and str(gdf.crs) != TARGET_CRS:
                 gdf = gdf.to_crs(TARGET_CRS)
             return json.loads(gdf.to_json())
-        except Exception:
+        except (OSError, ValueError, JSONDecodeError):
             pass
 
     return {"type": "FeatureCollection", "features": []}

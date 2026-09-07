@@ -11,12 +11,11 @@ import shutil
 from pathlib import Path
 
 import pytest
-from fastapi.testclient import TestClient
-
 from app.db.base import Base
 from app.db.session import SessionLocal
 from app.main import app
 from app.models.dataset import Dataset
+from fastapi.testclient import TestClient
 
 FIXTURES = Path(__file__).parent / "fixtures"
 SAMPLE_GEOJSON = FIXTURES / "sample.geojson"

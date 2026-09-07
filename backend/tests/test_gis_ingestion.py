@@ -10,10 +10,9 @@ from pathlib import Path
 
 import geopandas as gpd
 import pytest
-from shapely.geometry import Polygon
-
 from app.engines.gis import IngestError, IngestResult, ingest_dataset
 from app.engines.gis.ingestion import TARGET_CRS
+from shapely.geometry import Polygon
 
 FIXTURES = Path(__file__).parent / "fixtures"
 

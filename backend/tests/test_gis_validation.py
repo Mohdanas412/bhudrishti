@@ -10,7 +10,6 @@ from pathlib import Path
 
 import geopandas as gpd
 import pytest
-
 from app.engines.gis import IssueCode, ValidationResult, validate_dataset
 
 FIXTURES = Path(__file__).parent / "fixtures"

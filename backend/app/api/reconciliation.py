@@ -1,8 +1,10 @@
 from enum import Enum
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
 
-from app.engines.reconciliation import build_conflict, recommend_conflict
+from app.db.session import get_db
+from app.services.reconciliation_service import get_all_recommendations
 
 router = APIRouter()
 
@@ -61,10 +63,6 @@ def _to_contract_shape(
     return result
 
 
-from app.db.session import get_db
-from app.services.reconciliation_service import get_all_recommendations
-from fastapi import Depends
-from sqlalchemy.orm import Session
 
 
 @router.post("/run")
