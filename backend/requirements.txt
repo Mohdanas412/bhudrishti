@@ -1,4 +1,5 @@
 fastapi==0.115.0
+python-multipart==0.0.9  # required for UploadFile/Form routes (app/api/datasets.py)
 uvicorn[standard]==0.30.6
 pydantic==2.9.2
 sqlalchemy==2.0.35
@@ -10,7 +11,7 @@ psycopg2-binary==2.9.9
 geopandas==0.14.4
 shapely==2.0.6
 pyproj==3.6.1
-fiona==1.9.6
+fiona==1.10.0  # 1.9.6 fails to build against GDAL 3.10 / GCC 14 (Debian trixie)
 
 # Matching / fuzzy
 rapidfuzz==3.9.6
