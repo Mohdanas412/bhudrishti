@@ -58,8 +58,10 @@ if not features:
     for way in ways:
         try:
             coords = [nodes[n] for n in way["nodes"]]
-            if coords and coords[0] != coords[-1]: coords.append(coords[0])
-            if len(coords) < 4: continue
+            if coords and coords[0] != coords[-1]:
+                coords.append(coords[0])
+            if len(coords) < 4:
+                continue
             features.append({
                 "type": "Feature",
                 "properties": {
