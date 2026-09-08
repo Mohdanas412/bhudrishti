@@ -132,7 +132,11 @@ export default function MatchQueuePage() {
                       </span>
                     </td>
                     <td>
-                      <Link to="/workspace" className="btn btn-secondary btn-sm">
+                      <Link
+                        to="/workspace"
+                        state={{ focusFeature: m.feature_a }}
+                        className="btn btn-secondary btn-sm"
+                      >
                         Investigate <IconArrowRight size={12} />
                       </Link>
                     </td>

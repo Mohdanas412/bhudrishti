@@ -176,20 +176,20 @@ export default function ConflictReviewPage() {
                         {c.reason}
                       </p>
 
-                      <div style={{ display: "flex", gap: "16px", background: "var(--bg-surface-subtle)", padding: "12px", borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)" }}>
-                        <div>
-                          <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block" }}>Source A (Cadastral)</span>
-                          <strong style={{ fontSize: "13px" }}>1,240 m²</strong> (Owner: Ramesh Sharma)
+                        <div style={{ display: "flex", gap: "16px", background: "var(--bg-surface-subtle)", padding: "12px", borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)" }}>
+                          <div>
+                            <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block" }}>Source A</span>
+                            <strong style={{ fontSize: "13px" }}>{c.feature_a_details?.area || "1,240"} m²</strong>
+                          </div>
+                          <div style={{ borderLeft: "1px solid var(--border-subtle)", paddingLeft: "16px" }}>
+                            <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block" }}>Source B</span>
+                            <strong style={{ fontSize: "13px" }}>{c.feature_b_details?.area || "1,256"} m²</strong>
+                          </div>
+                          <div style={{ borderLeft: "1px solid var(--border-subtle)", paddingLeft: "16px" }}>
+                            <span style={{ fontSize: "11px", color: "var(--color-danger)", fontWeight: "600", display: "block" }}>Variance</span>
+                            <strong style={{ fontSize: "13px", color: "var(--color-danger)" }}>Δ {c.area_difference ? c.area_difference.toFixed(1) : "16.0"} m²</strong>
+                          </div>
                         </div>
-                        <div style={{ borderLeft: "1px solid var(--border-subtle)", paddingLeft: "16px" }}>
-                          <span style={{ fontSize: "11px", color: "var(--text-muted)", display: "block" }}>Source B (Municipal)</span>
-                          <strong style={{ fontSize: "13px" }}>1,256 m²</strong> (Zone R-2 Dwarka)
-                        </div>
-                        <div style={{ borderLeft: "1px solid var(--border-subtle)", paddingLeft: "16px" }}>
-                          <span style={{ fontSize: "11px", color: "var(--color-danger)", fontWeight: "600", display: "block" }}>Variance</span>
-                          <strong style={{ fontSize: "13px", color: "var(--color-danger)" }}>Δ 16.0 m²</strong>
-                        </div>
-                      </div>
                     </div>
 
                     <div style={{ background: "var(--color-info-bg)", border: "1px solid var(--color-info-border)", borderRadius: "var(--radius-md)", padding: "14px" }}>
@@ -217,7 +217,11 @@ export default function ConflictReviewPage() {
                           >
                             Reject
                           </button>
-                          <Link to="/workspace" className="btn btn-secondary btn-sm">
+                          <Link
+                            to="/workspace"
+                            state={{ focusFeature: c.feature_a }}
+                            className="btn btn-secondary btn-sm"
+                          >
                             Inspect on Map <IconArrowRight size={12} />
                           </Link>
                         </div>

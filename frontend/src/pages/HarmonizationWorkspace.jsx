@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { api } from "../services/api";
@@ -41,6 +42,7 @@ const BASEMAPS = {
 export default function HarmonizationWorkspace() {
   const mapContainerRef = useRef(null);
   const mapInstanceRef = useRef(null);
+  const location = useLocation();
 
   const [matches, setMatches] = useState([]);
   const [conflicts, setConflicts] = useState([]);
@@ -62,6 +64,11 @@ export default function HarmonizationWorkspace() {
 
   const [reviewMessage, setReviewMessage] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [mapReady, setMapReady] = useState(false);
+  const hasFittedRef = useRef(false);
+  // Set when the user lands here via "Investigate" from the Match Review page,
+  // so the map zooms to that specific feature instead of the whole extent.
+  const pendingFocusRef = useRef(null);
 
   // Load initial matching, conflict & recommendation data
   useEffect(() => {
@@ -77,7 +84,13 @@ export default function HarmonizationWorkspace() {
       setRecommendations(recsData);
 
       if (matchesData.length > 0) {
-        const defaultSelected = matchesData.find((m) => m.feature_a === "P-102") || matchesData[0];
+        // If we navigated here from "Investigate", select + focus that feature.
+        const focusFeature = location.state?.focusFeature;
+        const focused = focusFeature
+          ? matchesData.find((m) => m.feature_a === focusFeature)
+          : null;
+        if (focused) pendingFocusRef.current = focused;
+        const defaultSelected = focused || matchesData.find((m) => m.feature_a === "P-102") || matchesData[0];
         setSelectedMatch(defaultSelected);
       }
       setLoading(false);
@@ -101,7 +114,7 @@ export default function HarmonizationWorkspace() {
 
     map.on("load", () => {
       mapInstanceRef.current = map;
-      renderVectorLayers(map, matches, selectedMatch);
+      setMapReady(true);
     });
 
     return () => {
@@ -115,7 +128,7 @@ export default function HarmonizationWorkspace() {
     setBasemapMode(mode);
     const map = mapInstanceRef.current;
     if (!map) return;
-    map.setStyle(BASEMAPS[mode]);
+    map.setStyle(BASEMAPS[mode], { diff: false });
     map.once("style.load", () => {
       renderVectorLayers(map, matches, selectedMatch);
     });
@@ -163,6 +176,9 @@ export default function HarmonizationWorkspace() {
       map.getSource("cadastral-source").setData(cadastralFC);
     } else {
       map.addSource("cadastral-source", { type: "geojson", data: cadastralFC });
+    }
+
+    if (!map.getLayer("cadastral-fill")) {
       map.addLayer({
         id: "cadastral-fill",
         type: "fill",
@@ -189,6 +205,9 @@ export default function HarmonizationWorkspace() {
       map.getSource("municipal-source").setData(municipalFC);
     } else {
       map.addSource("municipal-source", { type: "geojson", data: municipalFC });
+    }
+
+    if (!map.getLayer("municipal-fill")) {
       map.addLayer({
         id: "municipal-fill",
         type: "fill",
@@ -224,6 +243,9 @@ export default function HarmonizationWorkspace() {
       map.getSource("highlight-source").setData(highlightFC);
     } else {
       map.addSource("highlight-source", { type: "geojson", data: highlightFC });
+    }
+
+    if (!map.getLayer("highlight-line")) {
       map.addLayer({
         id: "highlight-line",
         type: "line",
@@ -242,12 +264,60 @@ export default function HarmonizationWorkspace() {
     }
   };
 
+  // One-time auto-fit to the full extent, only when the map AND data are first
+  // both ready. Guarded by hasFittedRef and skipped when we arrived via
+  // "Investigate" (pendingFocusRef) — so a later Inspect click is never
+  // overridden by a zoom-out.
+  useEffect(() => {
+    if (!mapReady || !mapInstanceRef.current || hasFittedRef.current) return;
+    if (matches.length === 0) return;
+
+    const map = mapInstanceRef.current;
+    hasFittedRef.current = true; // Mark as fitted no matter what
+
+    // If we're going to focus a specific feature shortly, do NOT run the full-extent fit.
+    if (pendingFocusRef.current) {
+      return;
+    }
+
+    try {
+      const allCoords = matches.flatMap((m) => m.feature_a_details?.geometry?.coordinates[0] || []);
+      if (allCoords.length > 0) {
+        const bounds = allCoords.reduce(
+          (b, coord) => b.extend(coord),
+          new maplibregl.LngLatBounds(allCoords[0], allCoords[0])
+        );
+        map.fitBounds(bounds, { padding: 60, maxZoom: 17, duration: 800 });
+      }
+    } catch (e) {
+      console.error("Auto-fit to features failed:", e);
+    }
+  }, [mapReady, matches]);
+
+  // Re-render layers on data/selection change; if we landed via "Investigate",
+  // zoom the camera to that specific match's polygon.
   useEffect(() => {
     const map = mapInstanceRef.current;
-    if (map && map.isStyleLoaded()) {
-      renderVectorLayers(map, matches, selectedMatch);
+    if (!map || !map.isStyleLoaded()) return;
+    renderVectorLayers(map, matches, selectedMatch);
+
+    if (pendingFocusRef.current) {
+      const focus = pendingFocusRef.current;
+      pendingFocusRef.current = null;
+      try {
+        const coords = focus.feature_a_details?.geometry?.coordinates[0];
+        if (coords && coords.length) {
+          const bounds = coords.reduce(
+            (b, c) => b.extend(c),
+            new maplibregl.LngLatBounds(coords[0], coords[0])
+          );
+          map.fitBounds(bounds, { padding: 90, maxZoom: 18, duration: 800 });
+        }
+      } catch (e) {
+        console.error("Focus zoom failed:", e);
+      }
     }
-  }, [matches, selectedMatch, layersVisibility]);
+  }, [matches, selectedMatch, layersVisibility, mapReady]);
 
   // Select match item and synchronize Map ↔ Table ↔ Investigation Panel
   const selectMatchItem = (match) => {

@@ -172,6 +172,11 @@ def standardize_dataset_fields(dataset_id: int, db: Session) -> dict:
     if gdf.crs is not None and str(gdf.crs) != TARGET_CRS:
         gdf = gdf.to_crs(TARGET_CRS)
 
+    # Idempotency: clear any previously-ingested features for this dataset so
+    # re-running the pipeline (or seeding twice) doesn't create duplicate rows
+    # that pollute matching with N identical pairs.
+    db.query(Feature).filter(Feature.dataset_id == dataset.id).delete()
+
     created_count = 0
     all_unmapped = []
 
