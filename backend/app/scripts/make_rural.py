@@ -1,4 +1,6 @@
-import json, os, random
+import json
+import os
+import random
 
 # Base coordinate in rural Punjab (approx 30.5, 75.5)
 basex, basey = 75.500, 30.500

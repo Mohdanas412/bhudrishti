@@ -1,8 +1,8 @@
-import urllib.request
-import urllib.parse
 import json
 import os
 import random
+import urllib.parse
+import urllib.request
 
 # Punjab rural area bbox
 bbox = "30.85,75.75,30.90,75.85"
