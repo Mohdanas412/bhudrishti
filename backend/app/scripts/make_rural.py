@@ -64,9 +64,9 @@ out_a = {"type": "FeatureCollection", "crs": {"type": "name", "properties": {"na
 out_b = {"type": "FeatureCollection", "crs": {"type": "name", "properties": {"name": "EPSG:4326"}}, "features": features_b}
 
 os.makedirs("/app/uploads/rural", exist_ok=True)
-with open("/app/uploads/rural/punjab_cadastral.geojson", "w") as f:\
+with open("/app/uploads/rural/punjab_cadastral.geojson", "w") as f:
     json.dump(out_a, f)
-with open("/app/uploads/rural/punjab_panchayat.geojson", "w") as f:\
+with open("/app/uploads/rural/punjab_panchayat.geojson", "w") as f:
     json.dump(out_b, f)
 
 print(f"Generated {len(features_a)} rural features (Dataset A & B).")
