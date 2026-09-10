@@ -101,14 +101,15 @@ export default function MatchQueuePage() {
                   <th>Geometry IoU</th>
                   <th>Proximity</th>
                   <th>Area Similarity</th>
+                  <th>GeoAI MLP</th>
                   <th>Land Use</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody>
-                {filteredMatches.map((m) => (
-                  <tr key={m.feature_a}>
+                {filteredMatches.map((m, idx) => (
+                  <tr key={`${m.feature_a}_${m.feature_b}_${idx}`}>
                     <td><strong>{m.feature_a}</strong></td>
                     <td>{m.feature_b}</td>
                     <td>
@@ -125,6 +126,11 @@ export default function MatchQueuePage() {
                     <td>{Math.round((m.breakdown?.components?.geometry || 0.86) * 100)}%</td>
                     <td>{Math.round((m.breakdown?.components?.proximity || 0.94) * 100)}%</td>
                     <td>{Math.round((m.breakdown?.components?.area || 0.90) * 100)}%</td>
+                    <td>
+                      <span style={{ fontFamily: "var(--font-mono)", fontWeight: "600", color: "var(--primary-blue)" }}>
+                        {m.breakdown?.components?.mlp_confidence ? Math.round(m.breakdown.components.mlp_confidence * 100) : Math.round(m.score || 90)}%
+                      </span>
+                    </td>
                     <td>{m.feature_a_details?.land_use || "Residential"}</td>
                     <td>
                       <span className={`badge ${m.status === "matched" ? "badge-matched" : "badge-review"}`}>
@@ -134,8 +140,9 @@ export default function MatchQueuePage() {
                     <td>
                       <Link
                         to="/workspace"
-                        state={{ focusFeature: m.feature_a }}
+                        state={{ focusFeature: m.feature_a, feature_b: m.feature_b, matchPair: m }}
                         className="btn btn-secondary btn-sm"
+                        style={{ display: "inline-flex", alignItems: "center", gap: "5px" }}
                       >
                         Investigate <IconArrowRight size={12} />
                       </Link>

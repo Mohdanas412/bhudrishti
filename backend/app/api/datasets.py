@@ -1,10 +1,12 @@
 from enum import Enum
 
-from fastapi import APIRouter, Depends, HTTPException, UploadFile
+from fastapi import APIRouter, Depends, HTTPException, Query, UploadFile
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
 from app.services.datasets import (
+    compute_topology_health_service,
+    correct_dataset_topology_service,
     create_dataset,
     get_dataset_by_id,
     get_dataset_geojson,
@@ -101,6 +103,60 @@ async def repair_dataset_route(dataset_id: int, db: Session = Depends(get_db)):
 
     if result.get("_error") in ("ingest_failed", "crs_missing", "file_unreadable"):
         raise HTTPException(status_code=422, detail=result["detail"])
+
+    return result
+
+
+@router.post("/{dataset_id}/topology/correct")
+async def correct_dataset_topology_endpoint(
+    dataset_id: int,
+    reference_dataset_id: int | None = Query(None, description="Optional reference layer to snap onto"),
+    tolerance: float = Query(0.00005, description="Vertex snap distance tolerance (degrees/approx meters)"),
+    max_gap_area_sqm: float = Query(50.0, description="Max micro-gap area in m² to absorb"),
+    max_overlap_area_sqm: float = Query(100.0, description="Max micro-overlap area in m² to resolve"),
+    auto_merge_overlaps: bool = Query(True, description="Automatically merge/clip micro-overlaps"),
+    auto_fill_gaps: bool = Query(True, description="Automatically fill micro-gaps/slivers"),
+    db: Session = Depends(get_db),
+):
+    """Run Shapely automated multi-layer snap and topology correction on a dataset."""
+    result = correct_dataset_topology_service(
+        dataset_id=dataset_id,
+        db=db,
+        reference_dataset_id=reference_dataset_id,
+        tolerance=tolerance,
+        max_gap_area_sqm=max_gap_area_sqm,
+        max_overlap_area_sqm=max_overlap_area_sqm,
+        auto_merge_overlaps=auto_merge_overlaps,
+        auto_fill_gaps=auto_fill_gaps,
+    )
+
+    if result is None:
+        raise HTTPException(status_code=404, detail="Dataset not found")
+    if "_error" in result:
+        raise HTTPException(status_code=422, detail=result.get("detail", "Topology correction error"))
+
+    return result
+
+
+@router.get("/{dataset_id}/topology/health")
+async def get_dataset_topology_health_endpoint(
+    dataset_id: int,
+    reference_dataset_id: int | None = Query(None, description="Optional reference layer to inspect against"),
+    tolerance: float = Query(0.00005, description="Snap tolerance threshold"),
+    db: Session = Depends(get_db),
+):
+    """Retrieve Topology Health Report (gaps fixed, overlaps merged, health score) for a dataset."""
+    result = compute_topology_health_service(
+        dataset_id=dataset_id,
+        db=db,
+        reference_dataset_id=reference_dataset_id,
+        tolerance=tolerance,
+    )
+
+    if result is None:
+        raise HTTPException(status_code=404, detail="Dataset not found")
+    if "_error" in result:
+        raise HTTPException(status_code=422, detail=result.get("detail", "Topology check error"))
 
     return result
 
