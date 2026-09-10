@@ -179,6 +179,7 @@ def get_analytics_summary(db: Session) -> dict[str, Any]:
             "review_band_matches": review_matches,
             "low_agreement_matches": low_matches,
             "total_conflicts": len(conflicts),
+            "total_reviews": len(reviews),
             "resolved_conflicts": resolved_count,
             "unresolved_conflicts": len(conflicts) - resolved_count,
             "total_harmonized_parcels": total_features,

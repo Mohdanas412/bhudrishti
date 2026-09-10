@@ -93,7 +93,7 @@ def _calculate_ulpin_check_char(core_13: str) -> str:
     """Calculates ISO 7064 / Mod-36 check character for 13-character core ULPIN string."""
     val = 0
     for idx, char in enumerate(core_13.upper()):
-        c_val = UPIN_VAL = ULPIN_CHAR_MAP.get(char, 0)
+        c_val = ULPIN_CHAR_MAP.get(char, 0)
         weight = (idx + 1) * 3
         val = (val + c_val * weight) % len(ULPIN_CHARSET)
     return ULPIN_CHARSET[val]

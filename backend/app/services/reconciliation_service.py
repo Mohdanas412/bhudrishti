@@ -237,7 +237,7 @@ def _attach_match_details(db: Session, matches: list[dict[str, Any]]) -> None:
         }
         try:
             det["geometry"] = json.loads(r.geometry_geojson)
-        except (JSONDecodeError, TypeError):
+        except (json.JSONDecodeError, TypeError):
             det["geometry"] = None
         details[r.feature_id] = det
     for m in matches:
@@ -534,7 +534,7 @@ def get_harmonized_feature_collection(db: Session) -> dict[str, Any]:
                     continue
                 try:
                     geom = json.loads(db_feat.geometry_geojson)
-                except (JSONDecodeError, TypeError):
+                except (json.JSONDecodeError, TypeError):
                     continue
 
                 s_geom = shape(geom)

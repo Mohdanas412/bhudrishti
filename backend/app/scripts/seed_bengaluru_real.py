@@ -2,13 +2,13 @@
 These geometries align 100% with real OpenStreetMap buildings, roads, and properties.
 """
 import json
-import os
 import math
+import os
+
 from app.db.session import SessionLocal
-from app.models.source import Source
 from app.models.dataset import Dataset
 from app.models.feature import Feature
-from app.engines.standards.ulpin import generate_ulpin
+from app.models.source import Source
 
 REAL_SITES = [
     {
