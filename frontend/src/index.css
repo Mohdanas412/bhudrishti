@@ -757,6 +757,25 @@ button, input, select, textarea {
 .layer-municipal { background: var(--layer-municipal); }
 .layer-building { background: var(--layer-building); }
 .layer-harmonized { background: var(--layer-harmonized); }
+.layer-predicted {
+  background: #06b6d4;
+  box-shadow: 0 0 6px rgba(6, 182, 212, 0.6);
+}
+
+@keyframes predictedPulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(6, 182, 212, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+}
+
+.predicted-building-badge {
+  animation: predictedPulseGlow 2.2s infinite;
+  transition: transform 0.15s ease;
+}
+
+.predicted-building-badge:hover {
+  transform: translate(-50%, -50%) scale(1.08) !important;
+}
 
 /* Center: Large Map Canvas (55-65%) */
 .workspace-map-center {
@@ -776,27 +795,72 @@ button, input, select, textarea {
   position: absolute;
   bottom: 16px;
   right: 16px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: var(--radius-lg);
+  padding: 12px 16px;
   font-size: 11.5px;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.12), 0 8px 10px -6px rgba(15, 23, 42, 0.08);
   z-index: 15;
+  min-width: 220px;
+  transition: all 0.2s ease;
+}
+
+.map-floating-legend.dark-theme {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
 }
 
 .legend-row {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: var(--space-2);
-  margin-top: 4px;
+  margin-top: 6px;
+  font-size: 11.5px;
 }
 
 .legend-box {
   width: 14px;
   height: 10px;
-  border-radius: 2px;
+  border-radius: 3px;
   display: inline-block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.map-coordinates-hud {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: var(--radius-md);
+  padding: 6px 12px;
+  font-size: 11px;
+  font-family: var(--font-mono, monospace);
+  color: var(--text-primary);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.map-coordinates-hud.dark-theme {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+}
+
+@keyframes pulse-radar {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 0.2; }
+  100% { transform: scale(1.6); opacity: 0; }
 }
 
 /* Right Panel: Progressive Disclosure Investigation (25-30%) */

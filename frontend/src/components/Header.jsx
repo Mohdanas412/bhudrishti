@@ -68,7 +68,7 @@ export default function Header() {
         <div className="header-region-badge">
           <IconCrosshair size={14} color="var(--primary-blue)" />
           <span style={{ fontWeight: 600, color: "var(--text-primary)" }}>Extent:</span>
-          <span>Dwarka Sector 14, New Delhi · EPSG:4326</span>
+          <span>Pan-India Harmonization Grid · EPSG:4326</span>
         </div>
       </div>
 

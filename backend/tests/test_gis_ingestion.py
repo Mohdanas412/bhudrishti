@@ -23,7 +23,8 @@ def _write_tmp_gdf(gdf, suffix):
 
     fd, path = tempfile.mkstemp(suffix=suffix)
     os.close(fd)
-    gdf.to_file(path, driver="GeoJSON")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(gdf.to_json())
     return path
 
 

@@ -10,10 +10,12 @@ from sqlalchemy.orm import Session
 
 from app.engines.gis import (
     IngestError,
+    correct_topology,
     ingest_dataset,
     repair_dataset,
     validate_dataset,
 )
+from app.engines.standards import generate_ulpin, map_indic_properties
 from app.models.dataset import Dataset
 from app.models.feature import Feature
 from app.models.source import Source
@@ -24,7 +26,7 @@ STANDARDIZED_DIR = os.path.join(UPLOAD_DIR, "standardized")
 
 TARGET_CRS = "EPSG:4326"
 
-# UTM Zone 43N — covers Delhi/North India, matches this project's test data and
+# UTM Zone 43N — covers North India, matches this project's test data and
 # MVP scope (Section 3: "single project, single city/area"). Revisit if the
 # project ever expands beyond this region — a different UTM zone would be needed.
 AREA_CALC_CRS = "EPSG:32643"
@@ -91,10 +93,29 @@ def validate_dataset_geometry(dataset_id: int, db: Session) -> dict:
     if dataset is None:
         return None
 
+    # If file doesn't exist on disk, check if features exist in the DB and serialize them to disk
+    if not os.path.exists(dataset.file_path):
+        features = db.query(Feature).filter(Feature.dataset_id == dataset.id).all()
+        if features:
+            os.makedirs(os.path.dirname(dataset.file_path), exist_ok=True)
+            geojson_data = {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "geometry": json.loads(f.geojson) if isinstance(f.geojson, str) else f.geojson,
+                        "properties": f.attributes or {}
+                    }
+                    for f in features
+                ]
+            }
+            with open(dataset.file_path, "w") as f:
+                json.dump(geojson_data, f)
+
     result = validate_dataset(dataset.file_path)
 
-    dataset.crs = result.crs
-    dataset.feature_count = result.feature_count
+    dataset.crs = result.crs or dataset.crs or "EPSG:4326"
+    dataset.feature_count = result.feature_count if result.feature_count is not None else dataset.feature_count
     dataset.status = "validated" if result.valid else "invalid"
     db.commit()
 
@@ -127,9 +148,13 @@ def standardize_dataset_ingest(dataset_id: int, db: Session) -> dict:
 
 def _map_properties(properties: dict, synonym_dict: dict) -> tuple:
     """
-    Maps one feature's raw properties dict onto canonical fields using rapidfuzz.
+    Maps one feature's raw properties dict onto canonical fields using Indic NLP mapper
+    and rapidfuzz fallback.
     Returns (feature_id, attributes, unmapped_field_names).
     """
+    # First attempt Indic / Vernacular Term Translation
+    indic_mapped = map_indic_properties(properties)
+
     flat_synonym_to_canonical = {}
     for canonical, synonyms in synonym_dict.items():
         for syn in synonyms:
@@ -138,7 +163,25 @@ def _map_properties(properties: dict, synonym_dict: dict) -> tuple:
     mapped = {}
     unmapped = []
 
+    # Merge Indic-extracted fields if present
+    if indic_mapped.get("parcel_id"):
+        mapped["parcel_id"] = indic_mapped["parcel_id"]
+    if indic_mapped.get("owner"):
+        mapped["owner"] = indic_mapped["owner"]
+    if indic_mapped.get("land_use"):
+        mapped["land_use"] = indic_mapped["land_use"]
+    if indic_mapped.get("khata_number"):
+        mapped["khata_number"] = indic_mapped["khata_number"]
+    if indic_mapped.get("village"):
+        mapped["village"] = indic_mapped["village"]
+
     for raw_key, raw_value in properties.items():
+        if raw_key.lower() in ("ulpin", "bhu_aadhar"):
+            mapped[raw_key.lower()] = raw_value
+            continue
+        if raw_key.lower() in ("parcel_id", "plot_no", "khasra", "खसरा"):
+            mapped["parcel_id"] = raw_value
+            continue
         match = process.extractOne(
             raw_key.lower(), flat_synonym_to_canonical.keys(), scorer=fuzz.ratio
         )
@@ -146,7 +189,8 @@ def _map_properties(properties: dict, synonym_dict: dict) -> tuple:
             canonical_field = flat_synonym_to_canonical[match[0]]
             mapped[canonical_field] = raw_value
         else:
-            unmapped.append(raw_key)
+            if raw_key not in mapped:
+                unmapped.append(raw_key)
 
     feature_id = mapped.pop("parcel_id", None)
     attributes = mapped
@@ -172,26 +216,41 @@ def standardize_dataset_fields(dataset_id: int, db: Session) -> dict:
     if gdf.crs is not None and str(gdf.crs) != TARGET_CRS:
         gdf = gdf.to_crs(TARGET_CRS)
 
-    # Idempotency: clear any previously-ingested features for this dataset so
-    # re-running the pipeline (or seeding twice) doesn't create duplicate rows
-    # that pollute matching with N identical pairs.
+    # Reproject once upfront for metric area calculation rather than per-row
+    try:
+        projected_gdf = gdf.to_crs(AREA_CALC_CRS) if gdf.crs is not None else None
+    except Exception:
+        projected_gdf = None
+
+    # Idempotency: clear any previously-ingested features for this dataset
     db.query(Feature).filter(Feature.dataset_id == dataset.id).delete()
 
     created_count = 0
     all_unmapped = []
 
-    for idx, row in gdf.iterrows():
+    for idx_num, (idx, row) in enumerate(gdf.iterrows()):
         properties = row.drop("geometry").to_dict()
         feature_id, attributes, unmapped = _map_properties(properties, synonym_dict)
 
         if unmapped:
             all_unmapped.append({"feature_index": idx, "unmapped_fields": unmapped})
 
+        c = row.geometry.centroid
+        ulpin_id = generate_ulpin(c.y, c.x, polygon=row.geometry)
+        attributes["ulpin"] = ulpin_id
+        attributes["bhu_aadhar"] = ulpin_id
+
+        calc_area = 0.0
+        if projected_gdf is not None and idx_num < len(projected_gdf):
+            calc_area = float(projected_gdf.geometry.iloc[idx_num].area)
+        elif hasattr(row.geometry, "area"):
+            calc_area = float(row.geometry.area)
+
         new_feature = Feature(
             dataset_id=dataset.id,
             feature_id=str(feature_id) if feature_id is not None else f"unknown-{idx}",
             geometry_geojson=json.dumps(row.geometry.__geo_interface__),
-            area=gdf.loc[[idx]].to_crs(AREA_CALC_CRS).geometry.iloc[0].area,
+            area=calc_area,
             attributes=attributes,
         )
         db.add(new_feature)
@@ -241,13 +300,8 @@ def repair_dataset_service(dataset_id: int, db: Session) -> dict:
     standardized_path = os.path.join(STANDARDIZED_DIR, f"{dataset_id}.geojson").replace(
         os.sep, "/"
     )
-    if not result.gdf.empty:
-        result.gdf.to_file(standardized_path, driver="GeoJSON")
-    else:
-        # All features dropped — still write an empty FeatureCollection so
-        # downstream readers don't have to special-case a missing file.
-        empty = result.gdf.copy()  # empty GeoDataFrame with the same CRS (None)
-        empty.to_file(standardized_path, driver="GeoJSON")
+    with open(standardized_path, "w", encoding="utf-8") as f:
+        f.write(result.gdf.to_json() if not result.gdf.empty else result.gdf.copy().to_json())
 
     dataset.crs = result.crs
     dataset.feature_count = result.feature_count
@@ -264,6 +318,128 @@ def repair_dataset_service(dataset_id: int, db: Session) -> dict:
         "repaired_indices": result.repaired_indices,
         "standardized_path": standardized_path,
         "issues": result.issues,
+    }
+
+
+def correct_dataset_topology_service(
+    dataset_id: int,
+    db: Session,
+    reference_dataset_id: int | None = None,
+    tolerance: float = 0.00005,
+    max_gap_area_sqm: float = 50.0,
+    max_overlap_area_sqm: float = 100.0,
+    auto_merge_overlaps: bool = True,
+    auto_fill_gaps: bool = True,
+) -> dict | None:
+    """Automated Topology Correction and Snapping for a dataset.
+
+    Loads the dataset GDF, optional reference GDF, applies multi-layer / intra-layer
+    vertex snapping, gap filling, overlap merging, writes the corrected GeoJSON,
+    and returns a comprehensive Topology Health Report.
+    """
+    dataset = db.query(Dataset).filter(Dataset.id == dataset_id).first()
+    if dataset is None:
+        return None
+
+    if not dataset.file_path or not os.path.exists(dataset.file_path):
+        return {"_error": "file_not_found", "detail": f"Dataset file {dataset.file_path} not found"}
+
+    try:
+        gdf = gpd.read_file(dataset.file_path)
+    except Exception as exc:
+        return {"_error": "file_unreadable", "detail": str(exc)}
+
+    if gdf.crs is not None and str(gdf.crs) != TARGET_CRS:
+        gdf = gdf.to_crs(TARGET_CRS)
+
+    reference_gdf = None
+    if reference_dataset_id:
+        ref_ds = db.query(Dataset).filter(Dataset.id == reference_dataset_id).first()
+        if ref_ds and ref_ds.file_path and os.path.exists(ref_ds.file_path):
+            try:
+                reference_gdf = gpd.read_file(ref_ds.file_path)
+                if reference_gdf.crs is not None and str(reference_gdf.crs) != TARGET_CRS:
+                    reference_gdf = reference_gdf.to_crs(TARGET_CRS)
+            except Exception:
+                pass
+
+    # Execute topology correction engine
+    corrected_gdf, health_report = correct_topology(
+        gdf=gdf,
+        reference_gdf=reference_gdf,
+        tolerance=tolerance,
+        max_gap_area_sqm=max_gap_area_sqm,
+        max_overlap_area_sqm=max_overlap_area_sqm,
+        auto_merge_overlaps=auto_merge_overlaps,
+        auto_fill_gaps=auto_fill_gaps,
+    )
+
+    # Persist corrected layer to standardized dir
+    os.makedirs(STANDARDIZED_DIR, exist_ok=True)
+    corrected_path = os.path.join(STANDARDIZED_DIR, f"{dataset_id}_topology_corrected.geojson").replace(os.sep, "/")
+    with open(corrected_path, "w", encoding="utf-8") as f:
+        f.write(corrected_gdf.to_json())
+
+    dataset.status = "topology_corrected"
+    dataset.feature_count = len(corrected_gdf)
+    db.commit()
+
+    return {
+        "dataset_id": dataset_id,
+        "status": dataset.status,
+        "file_path": corrected_path,
+        "feature_count": len(corrected_gdf),
+        "health_report": health_report.to_dict(),
+    }
+
+
+def compute_topology_health_service(
+    dataset_id: int,
+    db: Session,
+    reference_dataset_id: int | None = None,
+    tolerance: float = 0.00005,
+) -> dict | None:
+    """Audit dataset topology health without mutating files."""
+    dataset = db.query(Dataset).filter(Dataset.id == dataset_id).first()
+    if dataset is None:
+        return None
+
+    if not dataset.file_path or not os.path.exists(dataset.file_path):
+        return {"_error": "file_not_found", "detail": f"Dataset file {dataset.file_path} not found"}
+
+    try:
+        gdf = gpd.read_file(dataset.file_path)
+    except Exception as exc:
+        return {"_error": "file_unreadable", "detail": str(exc)}
+
+    if gdf.crs is not None and str(gdf.crs) != TARGET_CRS:
+        gdf = gdf.to_crs(TARGET_CRS)
+
+    reference_gdf = None
+    if reference_dataset_id:
+        ref_ds = db.query(Dataset).filter(Dataset.id == reference_dataset_id).first()
+        if ref_ds and ref_ds.file_path and os.path.exists(ref_ds.file_path):
+            try:
+                reference_gdf = gpd.read_file(ref_ds.file_path)
+                if reference_gdf.crs is not None and str(reference_gdf.crs) != TARGET_CRS:
+                    reference_gdf = reference_gdf.to_crs(TARGET_CRS)
+            except Exception:
+                pass
+
+    # Run check without applying mutation
+    _, health_report = correct_topology(
+        gdf=gdf,
+        reference_gdf=reference_gdf,
+        tolerance=tolerance,
+        auto_merge_overlaps=False,
+        auto_fill_gaps=False,
+    )
+
+    return {
+        "dataset_id": dataset_id,
+        "status": dataset.status,
+        "feature_count": len(gdf),
+        "health_report": health_report.to_dict(),
     }
 
 
@@ -341,6 +517,7 @@ def get_dataset_geojson(dataset_id: int, db: Session) -> dict | None:
             if geom:
                 feature_list.append({
                     "type": "Feature",
+                    "id": f.feature_id,
                     "geometry": geom,
                     "properties": props,
                 })
@@ -363,190 +540,172 @@ def get_dataset_geojson(dataset_id: int, db: Session) -> dict | None:
     return {"type": "FeatureCollection", "features": []}
 
 
-def seed_sample_sih_project(db: Session) -> dict:
-    """Pre-seeds canonical Delhi-NCR datasets (Cadastral, Municipal, Building footprint)
-    with realistic overlapping parcels, area discrepancies, and attributes for SIH evaluation."""
+def seed_sample_sih_project(db: Session, num_datasets: int = 6) -> dict:
+    """Pre-seeds canonical pilot datasets (Cadastral, Municipal, Building footprint)
+    with realistic overlapping parcels, area discrepancies, and attributes for SIH evaluation.
+
+    Args:
+        db: Database session
+        num_datasets: Number of datasets to create (default 6, distributed across 3 types)
+    """
+    import random
+
+
     os.makedirs(UPLOAD_DIR, exist_ok=True)
     sample_dir = os.path.join(UPLOAD_DIR, "sih_sample")
     os.makedirs(sample_dir, exist_ok=True)
 
     # 1. Sources
-    src_cad = db.query(Source).filter(Source.name == "Delhi Revenue & Land Records Authority").first()
+    src_cad = db.query(Source).filter(Source.name == "State Revenue & Land Records Authority").first()
     if not src_cad:
-        src_cad = Source(name="Delhi Revenue & Land Records Authority", authority="State Govt", reliability_score=95.0)
+        src_cad = Source(name="State Revenue & Land Records Authority", authority="State Govt", reliability_score=95.0)
         db.add(src_cad)
-    src_mun = db.query(Source).filter(Source.name == "Municipal Corporation of Delhi (MCD)").first()
+    src_mun = db.query(Source).filter(Source.name == "Municipal Urban Local Body").first()
     if not src_mun:
-        src_mun = Source(name="Municipal Corporation of Delhi (MCD)", authority="Municipal Urban Local Body", reliability_score=82.0)
+        src_mun = Source(name="Municipal Urban Local Body", authority="Municipal Urban Local Body", reliability_score=82.0)
         db.add(src_mun)
-    src_bld = db.query(Source).filter(Source.name == "Delhi Urban Shelter & Building Registry").first()
+    src_bld = db.query(Source).filter(Source.name == "Urban Shelter & Building Registry").first()
     if not src_bld:
-        src_bld = Source(name="Delhi Urban Shelter & Building Registry", authority="Building & Housing Authority", reliability_score=88.0)
+        src_bld = Source(name="Urban Shelter & Building Registry", authority="Building & Housing Authority", reliability_score=88.0)
         db.add(src_bld)
     db.commit()
     db.refresh(src_cad)
     db.refresh(src_mun)
     db.refresh(src_bld)
 
-    # 2. GeoJSON Fixtures in Dwarka, Delhi (UTM 43N)
-    cadastral_data = {
-        "type": "FeatureCollection",
-        "crs": {"type": "name", "properties": {"name": "EPSG:4326"}},
-        "features": [
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "P-101", "land_use": "Residential", "owner": "Sunita Devi"},
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [[[77.2085, 28.6135], [77.2095, 28.6135], [77.2095, 28.6142], [77.2085, 28.6142], [77.2085, 28.6135]]]
-                }
-            },
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "P-102", "land_use": "Residential", "owner": "Ramesh Sharma"},
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [[[77.2096, 28.6135], [77.2108, 28.6135], [77.2108, 28.6144], [77.2096, 28.6144], [77.2096, 28.6135]]]
-                }
-            },
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "P-103", "land_use": "Commercial", "owner": "Apex Retailers Pvt Ltd"},
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [[[77.2110, 28.6136], [77.2122, 28.6136], [77.2122, 28.6145], [77.2110, 28.6145], [77.2110, 28.6136]]]
-                }
-            },
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "P-104", "land_use": "Public Utility", "owner": "DDA Parks & Recreation"},
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [[[77.2085, 28.6144], [77.2095, 28.6144], [77.2095, 28.6152], [77.2085, 28.6152], [77.2085, 28.6144]]]
-                }
-            },
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "P-105", "land_use": "Industrial", "owner": "Vikas Logistics & Warehousing"},
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [[[77.2097, 28.6146], [77.2115, 28.6146], [77.2115, 28.6155], [77.2097, 28.6155], [77.2097, 28.6146]]]
-                }
-            }
-        ]
-    }
+    # 2. Helper functions to generate synthetic parcel geometries
+    def generate_grid_parcels(base_lon: float, base_lat: float, rows: int, cols: int, cell_size: float,
+                               parcel_type: str, start_id: int, jitter: float = 0.00002) -> list:
+        """Generate a grid of parcels with optional jitter for realistic topology issues."""
+        features = []
+        land_uses = ["Residential", "Commercial", "Industrial", "Public Utility", "Agricultural"]
+        owners = ["Sunita Devi", "Ramesh Sharma", "Apex Retailers Pvt Ltd", "Parks & Recreation Board",
+                  "Vikas Logistics & Warehousing", "Municipal Corp", "Private Developer", "Govt Agency"]
+        zones = ["Zone R-1", "Zone R-2", "Zone C-1", "Zone I-1", "Green Belt", "Mixed Use"]
 
-    # Municipal dataset: overlaps with slight boundary shift & area differences
-    municipal_data = {
-        "type": "FeatureCollection",
-        "crs": {"type": "name", "properties": {"name": "EPSG:4326"}},
-        "features": [
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "M-456", "zone": "Zone R-1", "address": "Plot 101, Sector 14, Dwarka"},
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [[[77.2085, 28.6135], [77.2095, 28.6135], [77.2095, 28.6142], [77.2085, 28.6142], [77.2085, 28.6135]]]
-                }
-            },
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "M-458", "zone": "Zone R-2", "address": "Plot 102, Sector 14, Dwarka"},
-                "geometry": {
-                    "type": "Polygon",
-                    # Slightly expanded boundary simulating 16 m² encroachment / survey variation
-                    "coordinates": [[[77.20955, 28.61348], [77.21085, 28.61348], [77.21085, 28.61442], [77.20955, 28.61442], [77.20955, 28.61348]]]
-                }
-            },
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "M-459", "zone": "Zone C-1", "address": "Commercial Hub 103, Sector 14"},
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [[[77.2110, 28.6136], [77.2122, 28.6136], [77.2122, 28.6145], [77.2110, 28.6145], [77.2110, 28.6136]]]
-                }
-            },
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "M-460", "zone": "Green Belt", "address": "DDA Park Sector 14"},
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [[[77.2085, 28.6144], [77.2095, 28.6144], [77.2095, 28.6152], [77.2085, 28.6152], [77.2085, 28.6144]]]
-                }
-            },
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "M-461", "zone": "Industrial Zone", "address": "Plot 105, Phase 2, Dwarka"},
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [[[77.2097, 28.6146], [77.2115, 28.6146], [77.2115, 28.6155], [77.2097, 28.6155], [77.2097, 28.6146]]]
-                }
-            }
-        ]
-    }
+        feat_idx = 0
+        for row in range(rows):
+            for col in range(cols):
+                # Base coordinates
+                min_lon = base_lon + col * cell_size
+                max_lon = min_lon + cell_size
+                min_lat = base_lat + row * cell_size
+                max_lat = min_lat + cell_size
 
-    # Building footprint dataset
-    building_data = {
-        "type": "FeatureCollection",
-        "crs": {"type": "name", "properties": {"name": "EPSG:4326"}},
-        "features": [
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "BLD-101", "building_type": "Residential Multi-family", "status": "Occupied"},
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [[[77.2087, 28.6136], [77.2093, 28.6136], [77.2093, 28.6141], [77.2087, 28.6141], [77.2087, 28.6136]]]
-                }
-            },
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "BLD-102", "building_type": "Residential Villa", "status": "Under Construction"},
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [[[77.2098, 28.6136], [77.2106, 28.6136], [77.2106, 28.6142], [77.2098, 28.6142], [77.2098, 28.6136]]]
-                }
-            },
-            {
-                "type": "Feature",
-                "properties": {"parcel_id": "BLD-103", "building_type": "Commercial Plaza", "status": "Completed"},
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [[[77.2112, 28.6137], [77.2120, 28.6137], [77.2120, 28.6144], [77.2112, 28.6144], [77.2112, 28.6137]]]
-                }
-            }
-        ]
-    }
+                # Add small random jitter to simulate survey discrepancies
+                jitter_lon = random.uniform(-jitter, jitter)
+                jitter_lat = random.uniform(-jitter, jitter)
+
+                coords = [
+                    [min_lon + jitter_lon, min_lat + jitter_lat],
+                    [max_lon + jitter_lon, min_lat + jitter_lat],
+                    [max_lon + jitter_lon, max_lat + jitter_lat],
+                    [min_lon + jitter_lon, max_lat + jitter_lat],
+                    [min_lon + jitter_lon, min_lat + jitter_lat]
+                ]
+
+                if parcel_type == "cadastral":
+                    props = {
+                        "parcel_id": f"P-{start_id + feat_idx:05d}",
+                        "land_use": random.choice(land_uses),
+                        "owner": random.choice(owners)
+                    }
+                elif parcel_type == "municipal":
+                    props = {
+                        "parcel_id": f"M-{start_id + feat_idx:05d}",
+                        "zone": random.choice(zones),
+                        "address": f"Plot {start_id + feat_idx}, Sector {row + 1}"
+                    }
+                else:  # building
+                    props = {
+                        "parcel_id": f"BLD-{start_id + feat_idx:05d}",
+                        "building_type": random.choice(["Residential Multi-family", "Residential Villa", "Commercial Plaza",
+                                                        "Industrial Warehouse", "Public Facility"]),
+                        "status": random.choice(["Occupied", "Under Construction", "Completed", "Vacant"])
+                    }
+
+                features.append({
+                    "type": "Feature",
+                    "properties": props,
+                    "geometry": {"type": "Polygon", "coordinates": [coords]}
+                })
+                feat_idx += 1
+        return features
+
+    # 3. Generate datasets with configurable counts
+    # Distribute datasets: ~40% cadastral, ~35% municipal, ~25% building
+    cad_count = int(num_datasets * 0.4)
+    mun_count = int(num_datasets * 0.35)
+    bld_count = num_datasets - cad_count - mun_count
 
     created_datasets = []
-    specs = [
-        ("delhi_cadastral_records.geojson", cadastral_data, "cadastral", src_cad.id),
-        ("delhi_municipal_gis.geojson", municipal_data, "municipal", src_mun.id),
-        ("delhi_building_footprints.geojson", building_data, "building", src_bld.id),
+    dataset_configs = [
+        ("cadastral", src_cad.id, cad_count, 77.2000, 28.6100),
+        ("municipal", src_mun.id, mun_count, 77.2000, 28.6100),
+        ("building", src_bld.id, bld_count, 77.2000, 28.6100),
     ]
 
-    for fname, data, dtype, s_id in specs:
-        fpath = os.path.join(sample_dir, fname)
-        with open(fpath, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
+    for dtype, s_id, count, base_lon, base_lat in dataset_configs:
+        if count <= 0:
+            continue
 
-        # Look for existing dataset or create new
-        ds = db.query(Dataset).filter(Dataset.file_path == fpath).first()
-        if not ds:
-            ds = Dataset(
-                file_path=fpath,
-                dataset_type=dtype,
-                source_id=s_id,
-                status="uploaded",
+        for ds_idx in range(count):
+            # Each dataset gets a grid of parcels
+            # Vary grid size and position per dataset
+            rows = random.randint(3, 8)
+            cols = random.randint(3, 8)
+            cell_size = random.uniform(0.0015, 0.0030)
+            offset_lon = random.uniform(0, 0.02)
+            offset_lat = random.uniform(0, 0.02)
+
+            # Number of features per dataset: 9-64
+            features = generate_grid_parcels(
+                base_lon + offset_lon, base_lat + offset_lat,
+                rows, cols, cell_size, dtype,
+                start_id=ds_idx * 1000,
+                jitter=0.00003  # Small jitter for topology issues
             )
-            db.add(ds)
-            db.commit()
-            db.refresh(ds)
 
-        # Run validate and standardize
-        validate_dataset_geometry(ds.id, db)
-        standardize_dataset_ingest(ds.id, db)
-        standardize_dataset_fields(ds.id, db)
-        created_datasets.append(ds.id)
+            data = {
+                "type": "FeatureCollection",
+                "crs": {"type": "name", "properties": {"name": "EPSG:4326"}},
+                "features": features
+            }
 
-    return {"status": "seeded", "dataset_ids": created_datasets, "region": "Dwarka, New Delhi (UTM 43N)"}
+            fname = f"national_{dtype}_records_{ds_idx:03d}.geojson"
+            fpath = os.path.join(sample_dir, fname)
+
+            with open(fpath, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2)
+
+            # Look for existing dataset or create new
+            ds = db.query(Dataset).filter(Dataset.file_path == fpath).first()
+            if not ds:
+                ds = Dataset(
+                    file_path=fpath,
+                    dataset_type=dtype,
+                    source_id=s_id,
+                    status="uploaded",
+                )
+                db.add(ds)
+                db.commit()
+                db.refresh(ds)
+
+            # Run validate and standardize
+            validate_dataset_geometry(ds.id, db)
+            standardize_dataset_ingest(ds.id, db)
+            standardize_dataset_fields(ds.id, db)
+            created_datasets.append(ds.id)
+
+    return {
+        "status": "seeded",
+        "dataset_ids": created_datasets,
+        "region": "Authoritative National Pilot Extent",
+        "summary": {
+            "cadastral": cad_count,
+            "municipal": mun_count,
+            "building": bld_count,
+            "total_datasets": len(created_datasets)
+        }
+    }
 

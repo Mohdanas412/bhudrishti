@@ -35,22 +35,56 @@ export default function GISPage() {
 
   useEffect(() => {
     async function load() {
-      const matches = await api.getMatches();
+      const [matches, hotspotsData] = await Promise.all([
+        api.getMatches(),
+        api.getHotspots(),
+      ]);
       const loadedFeats = [];
       matches.forEach((m) => {
         if (m.feature_a_details?.geometry) {
           loadedFeats.push({
             id: m.feature_a,
-            name: `Parcel ${m.feature_a}`,
+            name: `Cadastral ${m.feature_a}`,
             status: m.status === "matched" ? "Verified" : "Review Required",
             type: "cadastral",
-            area: `${m.feature_a_details.area} m²`,
+            area: `${m.feature_a_details.area || ""} m²`,
             geometry: m.feature_a_details.geometry,
             owner: m.feature_a_details.owner,
             land_use: m.feature_a_details.land_use,
           });
         }
+        if (m.feature_b_details?.geometry) {
+          loadedFeats.push({
+            id: m.feature_b,
+            name: `Municipal ${m.feature_b}`,
+            status: "Municipal Source",
+            type: "municipal",
+            area: `${m.feature_b_details.area || ""} m²`,
+            geometry: m.feature_b_details.geometry,
+            owner: m.feature_b_details.owner || m.feature_b_details.address,
+            land_use: m.feature_b_details.zone || "Municipal Zone",
+          });
+        }
       });
+
+      (hotspotsData?.hotspots || []).forEach((h) => {
+        if (h.center && h.center.length >= 2) {
+          loadedFeats.push({
+            id: `HOTSPOT-${h.cluster_id}`,
+            name: `Discrepancy Hotspot #${h.cluster_id}`,
+            status: `${h.conflict_count} Conflicts (${h.severity})`,
+            type: "issues",
+            severity: h.severity,
+            latitude: h.center[1],
+            longitude: h.center[0],
+            geometry: {
+              type: "Point",
+              coordinates: [h.center[0], h.center[1]]
+            }
+          });
+        }
+      });
+
       setFeatures(loadedFeats);
       if (loadedFeats.length > 0) setSelectedFeature(loadedFeats[0]);
     }
@@ -122,14 +156,23 @@ export default function GISPage() {
               <button
                 className={`filter-chip ${basemap === "vector" ? "active" : ""}`}
                 onClick={() => setBasemap("vector")}
+                title="Standard Vector GIS Basemap"
               >
                 Vector
               </button>
               <button
                 className={`filter-chip ${basemap === "satellite" ? "active" : ""}`}
                 onClick={() => setBasemap("satellite")}
+                title="ArcGIS World Imagery Satellite Basemap"
               >
-                Satellite
+                🛰️ Satellite (Esri)
+              </button>
+              <button
+                className={`filter-chip ${basemap === "dark" ? "active" : ""}`}
+                onClick={() => setBasemap("dark")}
+                title="Dark Matter Cyber GIS Basemap"
+              >
+                🌙 Dark GIS
               </button>
             </div>
           </div>
@@ -207,12 +250,18 @@ export default function GISPage() {
 
       {/* ── Map Canvas ── fills the rest of the viewport height ── */}
       <div style={{ flex: 1, position: "relative", overflow: "hidden", minHeight: 0 }}>
-        <MapView
-          features={features}
-          basemap={basemap}
-          selectedFeature={selectedFeature}
-          onSelectFeature={setSelectedFeature}
-        />
+        {(() => {
+          const visibleLayerIds = new Set(layers.filter((l) => l.visible).map((l) => l.id));
+          const displayedFeatures = features.filter((f) => visibleLayerIds.has(f.type));
+          return (
+            <MapView
+              features={displayedFeatures}
+              basemap={basemap}
+              selectedFeature={selectedFeature}
+              onSelectFeature={setSelectedFeature}
+            />
+          );
+        })()}
         <LayerControl layers={layers} onToggle={toggleLayer} />
         <MapLegend />
         {selectedFeature && (

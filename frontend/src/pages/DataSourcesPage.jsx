@@ -95,7 +95,7 @@ export default function DataSourcesPage() {
     setActionOutput({
       type: "success",
       title: "Baseline Datasets Loaded",
-      text: `Standardized Cadastral, Municipal, and Building datasets populated for ${res.region || "Delhi NCR"}.`,
+      text: `Standardized Cadastral, Municipal, and Building datasets populated for ${res.region || "Pilot Extent"}.`,
     });
     await loadDatasets();
   };

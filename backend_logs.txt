@@ -1,0 +1,2778 @@
+INFO:     Will watch for changes in these directories: ['/app']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [1] using WatchFiles
+INFO:     Started server process [8]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+/app/app/api/arcgis_integration.py:25: DeprecatedWarning: add is deprecated as of 2.3.0 and has been removed in 3.0.0. Use `Folder.add()` instead.
+  result = publish_harmonized_to_arcgis(geojson_data)
+INFO:     192.168.65.1:45853 - "POST /integrations/arcgis/publish HTTP/1.1" 400 Bad Request
+WARNING:  WatchFiles detected changes in 'app/integrations/arcgis/publish.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [8]
+INFO:     Started server process [19]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+/app/app/api/arcgis_integration.py:25: DeprecatedWarning: add is deprecated as of 2.3.0 and has been removed in 3.0.0. Use `Folder.add()` instead.
+  result = publish_harmonized_to_arcgis(geojson_data)
+INFO:     192.168.65.1:56929 - "POST /integrations/arcgis/publish HTTP/1.1" 400 Bad Request
+WARNING:  WatchFiles detected changes in 'app/integrations/arcgis/publish.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [19]
+INFO:     Started server process [57]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+/app/app/api/arcgis_integration.py:25: DeprecatedWarning: add is deprecated as of 2.3.0 and has been removed in 3.0.0. Use `Folder.add()` instead.
+  result = publish_harmonized_to_arcgis(geojson_data)
+INFO:     192.168.65.1:58617 - "POST /integrations/arcgis/publish HTTP/1.1" 400 Bad Request
+WARNING:  WatchFiles detected changes in 'app/integrations/arcgis/publish.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [57]
+INFO:     Started server process [67]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+/app/app/api/arcgis_integration.py:25: DeprecatedWarning: add is deprecated as of 2.3.0 and has been removed in 3.0.0. Use `Folder.add()` instead.
+  result = publish_harmonized_to_arcgis(geojson_data)
+/usr/local/lib/python3.12/site-packages/pydantic/_internal/_config.py:291: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.9/migration/
+  warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+INFO:     192.168.65.1:63410 - "POST /integrations/arcgis/publish HTTP/1.1" 400 Bad Request
+INFO:     192.168.65.1:40900 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53502 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53502 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52784 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42653 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23343 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25427 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52784 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25933 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53502 - "GET /harmonized HTTP/1.1" 200 OK
+/app/app/api/arcgis_integration.py:25: DeprecatedWarning: add is deprecated as of 2.3.0 and has been removed in 3.0.0. Use `Folder.add()` instead.
+  result = publish_harmonized_to_arcgis(geojson_data)
+INFO:     192.168.65.1:42653 - "POST /integrations/arcgis/publish HTTP/1.1" 400 Bad Request
+INFO:     192.168.65.1:42653 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31769 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37520 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/integrations/arcgis/publish.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [67]
+INFO:     Started server process [101]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:50477 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50477 - "GET /harmonized HTTP/1.1" 200 OK
+/app/app/api/arcgis_integration.py:25: DeprecatedWarning: add is deprecated as of 2.3.0 and has been removed in 3.0.0. Use `Folder.add()` instead.
+  result = publish_harmonized_to_arcgis(geojson_data)
+/usr/local/lib/python3.12/site-packages/pydantic/_internal/_config.py:291: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.9/migration/
+  warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+INFO:     192.168.65.1:18416 - "POST /integrations/arcgis/publish HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39059 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22684 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62898 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49595 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39221 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28803 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22684 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39059 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37071 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25580 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65354 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37071 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56831 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28047 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47558 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25580 - "GET /harmonized HTTP/1.1" 200 OK
+/app/app/api/arcgis_integration.py:25: DeprecatedWarning: add is deprecated as of 2.3.0 and has been removed in 3.0.0. Use `Folder.add()` instead.
+  result = publish_harmonized_to_arcgis(geojson_data)
+INFO:     192.168.65.1:65354 - "POST /integrations/arcgis/publish HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65354 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27809 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65330 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22908 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57704 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36223 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36899 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36899 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47154 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19913 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29278 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53758 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36899 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60895 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47154 - "GET /harmonized HTTP/1.1" 200 OK
+/app/app/api/arcgis_integration.py:25: DeprecatedWarning: add is deprecated as of 2.3.0 and has been removed in 3.0.0. Use `Folder.add()` instead.
+  result = publish_harmonized_to_arcgis(geojson_data)
+INFO:     192.168.65.1:19913 - "POST /integrations/arcgis/publish HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19913 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61772 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65480 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46858 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52877 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30824 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31545 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17156 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "POST /datasets/8/validate HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17156 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "POST /datasets/7/validate HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17156 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "POST /datasets/6/validate HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17156 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "POST /datasets/5/validate HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "POST /datasets/4/validate HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "POST /datasets/8/standardize HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "POST /datasets/7/standardize HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47533 - "POST /datasets/6/repair HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 401, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/api/datasets.py", line 97, in repair_dataset_route
+    result = repair_dataset_service(dataset_id, db)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/datasets.py", line 245, in repair_dataset_service
+    result.gdf.to_file(standardized_path, driver="GeoJSON")
+  File "/usr/local/lib/python3.12/site-packages/geopandas/geodataframe.py", line 1249, in to_file
+    _to_file(self, filename, driver, schema, index, **kwargs)
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 610, in _to_file
+    _to_file_fiona(df, filename, driver, schema, crs, mode, **kwargs)
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 619, in _to_file_fiona
+    schema = infer_schema(df)
+             ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 693, in infer_schema
+    (col, convert_type(col, _type))
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 686, in convert_type
+    out_type = type(np.zeros(1, in_type).item()).__name__
+                    ^^^^^^^^^^^^^^^^^^^^
+TypeError: Cannot interpret '<StringDtype(na_value=nan)>' as a data type
+INFO:     192.168.65.1:42604 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42604 - "POST /datasets/6/repair HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 401, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/api/datasets.py", line 97, in repair_dataset_route
+    result = repair_dataset_service(dataset_id, db)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/datasets.py", line 245, in repair_dataset_service
+    result.gdf.to_file(standardized_path, driver="GeoJSON")
+  File "/usr/local/lib/python3.12/site-packages/geopandas/geodataframe.py", line 1249, in to_file
+    _to_file(self, filename, driver, schema, index, **kwargs)
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 610, in _to_file
+    _to_file_fiona(df, filename, driver, schema, crs, mode, **kwargs)
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 619, in _to_file_fiona
+    schema = infer_schema(df)
+             ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 693, in infer_schema
+    (col, convert_type(col, _type))
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 686, in convert_type
+    out_type = type(np.zeros(1, in_type).item()).__name__
+                    ^^^^^^^^^^^^^^^^^^^^
+TypeError: Cannot interpret '<StringDtype(na_value=nan)>' as a data type
+INFO:     192.168.65.1:17138 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17138 - "POST /datasets/6/repair HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 401, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/api/datasets.py", line 97, in repair_dataset_route
+    result = repair_dataset_service(dataset_id, db)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/datasets.py", line 245, in repair_dataset_service
+    result.gdf.to_file(standardized_path, driver="GeoJSON")
+  File "/usr/local/lib/python3.12/site-packages/geopandas/geodataframe.py", line 1249, in to_file
+    _to_file(self, filename, driver, schema, index, **kwargs)
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 610, in _to_file
+    _to_file_fiona(df, filename, driver, schema, crs, mode, **kwargs)
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 619, in _to_file_fiona
+    schema = infer_schema(df)
+             ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 693, in infer_schema
+    (col, convert_type(col, _type))
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 686, in convert_type
+    out_type = type(np.zeros(1, in_type).item()).__name__
+                    ^^^^^^^^^^^^^^^^^^^^
+TypeError: Cannot interpret '<StringDtype(na_value=nan)>' as a data type
+INFO:     192.168.65.1:62536 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62536 - "POST /datasets/6/repair HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 401, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/api/datasets.py", line 97, in repair_dataset_route
+    result = repair_dataset_service(dataset_id, db)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/datasets.py", line 245, in repair_dataset_service
+    result.gdf.to_file(standardized_path, driver="GeoJSON")
+  File "/usr/local/lib/python3.12/site-packages/geopandas/geodataframe.py", line 1249, in to_file
+    _to_file(self, filename, driver, schema, index, **kwargs)
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 610, in _to_file
+    _to_file_fiona(df, filename, driver, schema, crs, mode, **kwargs)
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 619, in _to_file_fiona
+    schema = infer_schema(df)
+             ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 693, in infer_schema
+    (col, convert_type(col, _type))
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 686, in convert_type
+    out_type = type(np.zeros(1, in_type).item()).__name__
+                    ^^^^^^^^^^^^^^^^^^^^
+TypeError: Cannot interpret '<StringDtype(na_value=nan)>' as a data type
+INFO:     192.168.65.1:25991 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25991 - "POST /datasets/6/repair HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 401, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/api/datasets.py", line 97, in repair_dataset_route
+    result = repair_dataset_service(dataset_id, db)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/services/datasets.py", line 245, in repair_dataset_service
+    result.gdf.to_file(standardized_path, driver="GeoJSON")
+  File "/usr/local/lib/python3.12/site-packages/geopandas/geodataframe.py", line 1249, in to_file
+    _to_file(self, filename, driver, schema, index, **kwargs)
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 610, in _to_file
+    _to_file_fiona(df, filename, driver, schema, crs, mode, **kwargs)
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 619, in _to_file_fiona
+    schema = infer_schema(df)
+             ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 693, in infer_schema
+    (col, convert_type(col, _type))
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/geopandas/io/file.py", line 686, in convert_type
+    out_type = type(np.zeros(1, in_type).item()).__name__
+                    ^^^^^^^^^^^^^^^^^^^^
+TypeError: Cannot interpret '<StringDtype(na_value=nan)>' as a data type
+INFO:     192.168.65.1:60137 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60137 - "POST /datasets/6/validate HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60137 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60137 - "POST /datasets/6/standardize HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23404 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41734 - "POST /datasets/5/standardize HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45437 - "POST /datasets/4/standardize HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60137 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23404 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41734 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30468 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16628 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19978 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61531 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44496 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19723 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34982 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61531 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35579 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64080 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51317 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48201 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60963 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27352 - "OPTIONS /reviews/62 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27352 - "POST /reviews/62 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27352 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54377 - "POST /reviews/62 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64884 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64884 - "POST /reviews/62 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57528 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46352 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46352 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57528 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22946 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64689 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46352 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46352 - "OPTIONS /reviews/1 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46352 - "POST /reviews/1 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21612 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38970 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21612 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64068 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56737 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49246 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58040 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65496 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34767 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29970 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51189 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40468 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24895 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60371 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36504 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47889 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33207 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21843 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46723 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62475 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23726 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34353 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26019 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59817 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38008 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29691 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28042 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38008 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64022 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38907 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60733 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41803 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18104 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56907 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59173 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59265 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16506 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17544 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61024 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34245 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19716 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35378 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47686 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41795 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41795 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37485 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45454 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60907 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25328 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58664 - "GET /reviews HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60767 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43145 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60767 - "GET /reviews HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61476 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58664 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33655 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43145 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35499 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60944 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58815 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46875 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54881 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34912 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46765 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48823 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17142 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48823 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48823 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52779 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25435 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48052 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55477 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57721 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52779 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48823 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55477 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25435 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48052 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57721 - "GET /harmonized HTTP/1.1" 200 OK
+/app/app/api/arcgis_integration.py:25: DeprecatedWarning: add is deprecated as of 2.3.0 and has been removed in 3.0.0. Use `Folder.add()` instead.
+  result = publish_harmonized_to_arcgis(geojson_data)
+INFO:     192.168.65.1:48823 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52779 - "POST /integrations/arcgis/publish HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21542 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31963 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49455 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58624 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60287 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22803 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61040 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26052 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54677 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40631 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32271 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58739 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36979 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33259 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37983 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62301 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33259 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29120 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31566 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29120 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59472 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40742 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40742 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59472 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28589 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17338 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63986 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54241 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56975 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56309 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65128 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31060 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48379 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65128 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65128 - "OPTIONS /reviews/2 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65128 - "POST /reviews/2 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26580 - "POST /reviews/2 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42435 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42435 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33068 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42435 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33068 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56611 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58446 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65406 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42531 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48574 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48323 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53830 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51983 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51419 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42531 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45001 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64632 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64632 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45001 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64632 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45001 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55205 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44316 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35189 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44618 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45001 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64632 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55205 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57829 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32685 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49476 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38591 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53101 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55063 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34312 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25251 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44042 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52679 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41516 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55846 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18690 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49756 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26596 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24503 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24503 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42610 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56633 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52727 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22655 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64199 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45293 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42610 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52727 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35040 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61893 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39108 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37146 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37146 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31249 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53309 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18836 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37966 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25227 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25227 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40664 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62835 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53099 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25563 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29834 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35264 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35571 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43816 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43529 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36253 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50825 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49846 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23514 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28623 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54197 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65515 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41508 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61720 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33368 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49794 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16848 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31847 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53660 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23207 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63899 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63899 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17621 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43381 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50581 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59139 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46841 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22870 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39041 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40617 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62532 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50787 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39041 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46841 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22870 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50787 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50787 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32714 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21107 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64328 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30917 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28672 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57692 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38186 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20881 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17153 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62108 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52005 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26752 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18580 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53485 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25187 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56013 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64679 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34869 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50283 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36350 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32055 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32731 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17408 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17408 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34317 - "GET /harmonized HTTP/1.1" 200 OK
+/app/app/api/arcgis_integration.py:25: DeprecatedWarning: add is deprecated as of 2.3.0 and has been removed in 3.0.0. Use `Folder.add()` instead.
+  result = publish_harmonized_to_arcgis(geojson_data)
+INFO:     192.168.65.1:17408 - "POST /integrations/arcgis/publish HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17408 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61862 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53369 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59503 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40732 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39070 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57703 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24724 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62015 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32859 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52129 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37013 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/engines/matching/mlp_model.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [101]
+INFO:     Started server process [159]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/engines/matching/scoring.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [159]
+INFO:     Started server process [167]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'tests/test_mlp_matching.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [167]
+INFO:     Started server process [182]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:22848 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34404 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30786 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58971 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52292 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25590 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47628 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23659 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35752 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44849 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35752 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36427 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44849 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52246 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23350 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29701 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35752 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52246 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23350 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36427 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44849 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23350 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29701 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52246 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35752 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44849 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36427 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35752 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23350 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44849 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29701 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52246 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36427 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35752 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23350 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29701 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44849 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52246 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36427 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35752 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44849 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29701 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23350 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36427 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52246 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36427 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35752 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44849 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23350 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29701 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23350 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52246 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63883 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23214 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35219 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30676 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59469 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27910 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23214 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63883 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59469 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30676 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35219 - "GET /datasets HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/engines/matching/mlp_model.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [182]
+INFO:     Started server process [210]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:39799 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/engines/matching/scoring.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [210]
+INFO:     Started server process [226]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'tests/test_matching_engine.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [226]
+INFO:     Started server process [241]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/reconciliation_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [241]
+INFO:     Started server process [256]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:19899 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24795 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17066 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17066 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49028 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48163 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17066 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34711 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23986 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32064 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49028 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48163 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34711 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17066 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49028 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23986 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32064 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48163 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17066 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32064 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31429 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30898 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44196 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22755 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32508 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16864 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47193 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57321 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40973 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42143 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40973 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34792 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55462 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57388 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42086 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16634 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31931 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16634 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27567 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23258 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21248 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62221 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51470 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63607 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21248 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27567 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23258 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62221 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63607 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51470 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57719 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26734 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48013 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63828 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50459 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18083 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38147 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51960 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19411 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22192 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50281 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19954 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/engines/gis/topology.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [256]
+INFO:     Started server process [288]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/engines/gis/__init__.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [288]
+INFO:     Started server process [303]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/datasets.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [303]
+INFO:     Started server process [318]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/datasets.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [318]
+INFO:     Started server process [333]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/reconciliation_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [333]
+INFO:     Started server process [348]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/reconciliation_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [348]
+INFO:     Started server process [363]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/datasets.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [363]
+INFO:     Started server process [378]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/datasets.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [378]
+INFO:     Started server process [393]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/harmonized.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [393]
+INFO:     Started server process [408]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'tests/test_gis_topology.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [408]
+INFO:     Started server process [423]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'tests/test_gis_topology.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [423]
+INFO:     Started server process [438]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:60280 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60280 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55889 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62904 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50541 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49163 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34676 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21575 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21575 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38505 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31210 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62313 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45882 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31132 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21575 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38505 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31210 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62313 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45882 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31132 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38505 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31210 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45882 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31132 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62313 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31210 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62778 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45882 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38505 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62313 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31132 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38505 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62778 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45882 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31210 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31132 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62313 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62778 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38505 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45882 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62778 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31132 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62313 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45882 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57354 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38505 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62778 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31132 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54522 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54522 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53645 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48577 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53645 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32043 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22690 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35421 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35421 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60005 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39834 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26922 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53074 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64372 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35421 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60005 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39834 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64372 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53074 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26922 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64372 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64372 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64372 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39259 - "GET /matching HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/datasets.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [438]
+INFO:     Started server process [465]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/datasets.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [465]
+INFO:     Started server process [480]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/datasets.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [480]
+INFO:     Started server process [495]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/reconciliation_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [495]
+INFO:     Started server process [510]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/reconciliation_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [510]
+INFO:     Started server process [525]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/reconciliation_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [525]
+INFO:     Started server process [540]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/standards.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [540]
+INFO:     Started server process [555]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [555]
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Started server process [570]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [585]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [585]
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Started server process [600]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [615]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'tests/test_standards_ulpin_indic.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [615]
+INFO:     Started server process [630]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:31619 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28146 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31619 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28146 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32981 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65194 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44427 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32981 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44427 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51716 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65194 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43654 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48528 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32981 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51716 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44427 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43654 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65194 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48528 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32981 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44427 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44427 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38580 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38580 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38580 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26611 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26611 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38580 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59133 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47073 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59859 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46050 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59133 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59133 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41784 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41784 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41602 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41602 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60775 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22221 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57394 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22001 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23437 - "POST /datasets/sample-seed HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23437 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48181 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55359 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62078 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54158 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55359 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58118 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23437 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48181 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54158 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62078 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23437 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36739 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36739 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32519 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65192 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31802 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47081 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/engines/gis/encroachment.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [630]
+INFO:     Started server process [658]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/geoai.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [658]
+INFO:     Started server process [673]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:25655 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54377 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20113 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31513 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44204 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18555 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44204 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42847 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30013 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31436 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35045 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64308 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60200 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42847 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30013 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31436 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35045 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64308 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31436 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60200 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42847 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35045 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30013 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64308 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60200 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42847 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31436 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50576 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50576 - "POST /datasets/11/validate HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50576 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50576 - "POST /datasets/11/standardize HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50576 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50576 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64382 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22460 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49543 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35807 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55301 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22460 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64382 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50576 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50576 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22460 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64382 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43478 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64925 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60616 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60616 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26395 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48843 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26395 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64202 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52534 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32809 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58419 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33248 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17271 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37331 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38247 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43234 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59560 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46962 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54142 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37766 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65278 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32710 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64514 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65278 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32710 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64514 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65278 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54922 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31179 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37045 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32710 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64514 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17379 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40920 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37799 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26885 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45528 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26885 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45528 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17749 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59133 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26910 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26885 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56590 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45528 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33175 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45528 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46382 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34269 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22626 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53565 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45844 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39626 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17770 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53565 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34269 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22626 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48460 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19109 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [673]
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Started server process [714]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [729]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:29234 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [729]
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Started server process [745]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [760]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'tests/test_geoai_encroachment.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [760]
+INFO:     Started server process [775]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:46236 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38450 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28880 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63327 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17553 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56252 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56252 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37464 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64160 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48036 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64160 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64160 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49748 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43897 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18710 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56711 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20407 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64160 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56711 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43897 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49748 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49748 - "GET /reviews HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64160 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43897 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56711 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43897 - "GET /reviews HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49748 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64160 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33384 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27702 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39786 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39786 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56483 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64415 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36555 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39786 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21918 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26633 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36555 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56483 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64415 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21918 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26633 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61420 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64415 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56483 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51435 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59714 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26083 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59714 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53204 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60850 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43289 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60850 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60850 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43289 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23677 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37450 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33521 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17871 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60850 - "GET /integrations/arcgis/hotspots HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43289 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37450 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23677 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33521 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17871 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60850 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43289 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23677 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33521 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37450 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43289 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60056 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33716 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30289 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31600 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29637 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61882 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33716 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42325 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64058 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33969 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53500 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17433 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36540 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27979 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36540 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59419 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24180 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27461 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50160 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29259 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22767 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59419 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24180 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27461 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50160 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59419 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29259 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24180 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27461 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22767 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59419 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50160 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22767 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22767 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65352 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22125 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55627 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34888 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61585 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35263 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55762 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55762 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20577 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49276 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26755 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59459 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/reconciliation_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [775]
+INFO:     Started server process [816]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:64944 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/reconciliation_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [816]
+INFO:     Started server process [832]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:47319 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17264 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24792 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52400 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54224 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21032 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40935 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52400 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64207 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32381 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21032 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54224 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52400 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22457 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22457 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49188 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49188 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34203 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34203 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39142 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39142 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61503 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61082 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61503 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61082 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30258 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48405 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45684 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [832]
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+Process SpawnProcess-45:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/config.py", line 434, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/app/app/main.py", line 53, in <module>
+    arcgis_integration.router, prefix="/integrations/arcgis", tags=["arcgis"]
+    ^^^^^^^^^^^^^^^^^^
+NameError: name 'arcgis_integration' is not defined
+Process SpawnProcess-46:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/config.py", line 434, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/app/app/main.py", line 53, in <module>
+    arcgis_integration.router, prefix="/integrations/arcgis", tags=["arcgis"]
+    ^^^^^^^^^^^^^^^^^^
+NameError: name 'arcgis_integration' is not defined
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Started server process [882]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [897]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:60116 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36111 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34736 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39722 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57630 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23431 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36111 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47579 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39722 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21424 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27548 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40469 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47820 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21424 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27548 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55036 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63370 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34719 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34719 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21824 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33124 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33124 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42931 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42931 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21269 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21269 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39756 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39756 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57257 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25571 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41585 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38280 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58305 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45729 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33226 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33226 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46664 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42667 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43841 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46104 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42691 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28605 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26606 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26606 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44163 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56203 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42430 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61054 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16733 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26773 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44163 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56164 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56164 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28022 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28022 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56164 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64763 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57621 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56312 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26092 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28022 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56164 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59966 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59966 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59966 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59966 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59966 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59966 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59966 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36498 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35970 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36498 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52837 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50720 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34086 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42315 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25566 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52837 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57675 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50720 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37175 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37175 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37175 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37175 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60119 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58877 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57863 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57863 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25309 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58425 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56221 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59046 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44747 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56409 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20187 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20187 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63863 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28422 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28422 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30803 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56129 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35181 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44408 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43370 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43370 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31191 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31191 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31191 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54256 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31754 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54256 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31754 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31191 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26927 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30612 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26196 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48113 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48113 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48113 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48113 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65467 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65467 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18469 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18469 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53526 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24455 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21022 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36833 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59789 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59789 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63071 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62013 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63997 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54206 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45733 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49320 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20770 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50996 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23268 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26629 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26629 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26629 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26629 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50791 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43160 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29171 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60931 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36592 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50684 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43160 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36592 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29171 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60931 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43160 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50684 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29171 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59731 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36592 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60931 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43160 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50684 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29171 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59731 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60931 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36592 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43160 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50684 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18690 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18690 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18690 - "OPTIONS /reviews/65 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18690 - "POST /reviews/65 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18690 - "POST /reviews/65 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18690 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18690 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60454 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34423 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54919 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54616 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54616 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50784 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62101 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41687 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23372 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42673 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31735 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24967 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35974 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52786 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35974 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39798 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39798 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34044 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25674 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41873 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57273 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38299 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34044 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46835 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46835 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24583 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57396 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65122 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16013 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48511 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16013 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48511 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22214 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52144 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45167 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46978 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16013 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41872 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26220 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16714 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31614 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23095 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23095 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63946 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63946 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46974 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46974 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46974 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46249 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62912 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33042 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46974 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55269 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40523 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46249 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62912 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33042 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40523 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46974 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46249 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55269 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40523 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62912 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33042 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46249 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46974 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55269 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40523 - "GET /datasets HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/reconciliation_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [897]
+INFO:     Started server process [948]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:32407 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51695 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30963 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47095 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30963 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47095 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21847 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28018 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50905 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17177 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21847 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28018 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47095 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30963 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50905 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47095 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17177 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21847 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53279 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53279 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/reconciliation_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [948]
+INFO:     Started server process [967]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:37191 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49943 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/datasets.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [967]
+INFO:     Started server process [984]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/datasets.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [984]
+INFO:     Started server process [999]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:51807 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37151 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18363 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'tests/test_mlp_matching.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [999]
+INFO:     Started server process [1016]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:20024 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16883 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16883 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37267 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50176 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44183 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44183 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53243 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19089 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62816 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49124 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32989 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62816 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28812 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48490 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60724 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18957 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60724 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19528 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20411 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19528 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35545 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43812 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49581 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64398 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35545 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38178 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59920 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49581 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16061 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20099 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26643 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18859 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42524 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55824 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59457 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42302 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36041 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/datasets.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1016]
+INFO:     Started server process [1038]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:27256 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46577 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'tests/test_gis_topology.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1038]
+INFO:     Started server process [1054]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:42110 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38898 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41090 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57626 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42426 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25773 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42100 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53018 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25773 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54297 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23802 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52957 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42100 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25773 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54297 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53018 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52957 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23802 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42100 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54297 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20976 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26349 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26349 - "POST /datasets/sample-seed HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26349 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33953 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54378 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46880 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26349 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65113 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30695 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54378 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46880 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33953 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54378 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65113 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26349 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30695 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61594 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22088 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46392 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51306 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55710 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47759 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61960 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56603 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16010 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23580 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55710 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47759 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61960 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39681 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39681 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62258 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29476 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30778 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56754 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32135 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30778 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30778 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30778 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30778 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31330 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30778 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31330 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19683 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24033 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37352 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30134 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30778 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31330 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30134 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37352 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19683 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35166 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38318 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38318 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41318 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19390 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23275 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23275 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19390 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52793 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23275 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60720 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24033 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25054 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50147 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38307 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/api/standards.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1054]
+INFO:     Started server process [1091]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:55381 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39785 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25882 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45663 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55336 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38569 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55336 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21315 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38569 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55336 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48977 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24867 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33812 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21315 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55336 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38569 - "POST /datasets/11/validate HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48977 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38569 - "POST /datasets/sample-seed HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38569 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48977 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45336 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38569 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59424 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64794 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45336 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60003 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43550 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43550 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31811 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64100 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36549 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43550 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26860 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16979 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63918 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63918 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16038 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40740 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63918 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60623 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49574 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20123 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16038 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40740 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63918 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60623 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49574 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20123 - "POST /datasets/sample-seed HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63918 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16038 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60623 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20123 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49574 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40740 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63918 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16038 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20123 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60623 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49574 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40740 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20123 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60623 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20123 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21172 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43072 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32310 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50979 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28877 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38996 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18412 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31557 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31557 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31557 - "POST /datasets/sample-seed HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31557 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62780 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31557 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31866 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34756 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47920 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48292 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62780 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47920 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31866 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31557 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48292 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34756 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47920 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62780 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31557 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50184 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57980 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37179 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36346 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51493 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43273 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50184 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37179 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59317 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57265 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20025 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54691 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33018 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36257 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41874 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41169 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33213 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19598 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19598 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43579 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31800 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35723 - "GET /health HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1091]
+INFO:     Stopping reloader process [1]
+INFO:     Will watch for changes in these directories: ['/app']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [1] using WatchFiles
+INFO:     Started server process [8]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:52674 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58446 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46985 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44891 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41307 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39118 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54180 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44891 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64810 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33830 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39118 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64811 - "POST /datasets/sample-seed HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64811 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22666 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40984 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64811 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48326 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21910 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28901 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22666 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50464 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50464 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22005 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63515 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23690 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/datasets.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [8]
+INFO:     Stopping reloader process [1]
+INFO:     Will watch for changes in these directories: ['/app']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [1] using WatchFiles
+INFO:     Started server process [8]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:47809 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47809 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20105 - "POST /datasets/sample-seed HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49846 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34898 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59575 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58161 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42324 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28549 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53436 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58161 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54215 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33387 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42324 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16423 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39825 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64469 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64469 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20647 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17243 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42402 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44941 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20659 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64469 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20647 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62788 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62788 - "POST /datasets/sample-seed HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62788 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46714 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58720 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60650 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62788 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20377 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16394 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46714 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17378 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58644 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17231 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59935 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62602 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62602 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37655 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36239 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53945 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31170 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23452 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22403 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.168.65.1:40122 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37031 - "GET /harmonized HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52264 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18170 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62564 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50222 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50631 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32065 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50631 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63521 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32065 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35014 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64332 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34027 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50631 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41628 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19135 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60670 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30107 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41628 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59429 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37505 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19135 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28444 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37975 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52042 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49011 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28933 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26025 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28444 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37975 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49011 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52042 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28933 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26025 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28444 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37975 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56911 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57339 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62997 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36290 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29155 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22010 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52538 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27527 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62997 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36290 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22010 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22010 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62997 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36290 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38234 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33992 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46122 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33992 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33992 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60224 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45458 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62437 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55061 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30346 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53824 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19903 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64678 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53240 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44663 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37091 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37091 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64958 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59378 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33118 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33065 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55579 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45803 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26133 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26112 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42161 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64993 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64993 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18772 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44251 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53916 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26603 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48052 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56160 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63626 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41887 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18961 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53774 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54344 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36332 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47251 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42775 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28489 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26124 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35297 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29239 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33449 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24254 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22840 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55391 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55391 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53786 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25763 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46845 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17915 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65061 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51898 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40824 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64023 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41382 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41289 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55238 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61418 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50061 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57057 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46787 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53293 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37302 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44912 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61577 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21566 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24341 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20798 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20798 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25206 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33136 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21694 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33483 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65416 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23080 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30313 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47208 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33483 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21694 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65416 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47208 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23080 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30313 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55368 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55256 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17032 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59461 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44233 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20116 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30549 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54060 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54060 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58647 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63460 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18471 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31057 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/reconciliation_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [8]
+WARNING:  WatchFiles detected changes in 'app/services/reconciliation_service.py'. Reloading...
+INFO:     Started server process [83]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [98]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:41792 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46483 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37206 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34078 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61215 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42747 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42747 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34464 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16642 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22207 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62809 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62809 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34288 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31637 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20433 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42936 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34409 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53381 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34147 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20052 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56947 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58811 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49417 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49676 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52712 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36685 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36045 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31688 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31911 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22978 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:22978 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56335 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50256 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57482 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:45876 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49876 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20113 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47418 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26995 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49864 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33723 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33723 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21978 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30025 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61132 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34459 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38282 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49770 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59934 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29709 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48993 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25761 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51374 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32495 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55474 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:26758 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49218 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50167 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28417 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57424 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59805 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18474 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64130 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:21705 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46239 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51076 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48931 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60990 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36149 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63152 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:65342 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24537 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37587 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20592 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42566 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62056 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32151 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54333 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28990 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64068 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44889 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19153 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27100 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54333 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64068 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28990 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44889 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19153 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27100 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41815 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37601 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60536 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61529 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61529 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29161 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:33939 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:46747 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62147 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42131 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29161 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:61529 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38318 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16098 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34155 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54903 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48626 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:16098 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38481 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38318 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38318 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38318 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37383 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64583 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64583 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34497 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38406 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50336 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56277 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38608 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31993 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18250 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31651 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50336 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38608 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56277 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18250 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31993 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50336 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31651 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38608 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24992 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24992 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50609 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43635 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50314 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23331 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39436 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24992 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43635 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50609 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27839 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43635 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50609 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:29582 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53799 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27839 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28860 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43635 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48663 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:23693 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57720 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:59454 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47423 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20626 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40724 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57441 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55924 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55924 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62728 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:34571 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:55924 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37859 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37859 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17928 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:63114 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17928 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17928 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17928 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30543 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:30543 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:52506 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60555 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43529 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43529 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27676 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48744 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37209 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51446 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48744 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44290 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27676 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43529 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:37209 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51446 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:48744 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:27676 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:43529 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44290 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20033 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20033 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53676 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25850 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:24637 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49813 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:47182 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53676 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36742 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:28225 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31695 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31695 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31695 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:31695 - "POST /harmonized/topology/correct?tolerance=0.00005 HTTP/1.1" 200 OK
+INFO:     192.168.65.1:17913 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39345 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:38253 - "GET /health HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/datasets.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [98]
+WARNING:  WatchFiles detected changes in 'app/services/datasets.py'. Reloading...
+INFO:     Started server process [141]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [156]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:36558 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:57520 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41059 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40685 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40685 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:25749 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:40218 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:60680 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51334 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51334 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:42727 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35388 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:18886 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41412 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:64485 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:36050 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41069 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20671 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51050 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20671 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:32253 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51050 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:41401 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:49346 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:53756 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:20671 - "GET /matching HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19396 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:50217 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56749 - "GET /conflicts HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35057 - "GET /reconciliation HTTP/1.1" 200 OK
+INFO:     192.168.65.1:39918 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:58444 - "GET /datasets HTTP/1.1" 200 OK
+INFO:     192.168.65.1:19396 - "POST /datasets/sample-seed HTTP/1.1" 200 OK
+INFO:     192.168.65.1:56749 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:35057 - "GET /health HTTP/1.1" 200 OK
+INFO:     Will watch for changes in these directories: ['/app']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [1] using WatchFiles
+INFO:     Started server process [8]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:42715 - "POST /datasets/sample-seed HTTP/1.1" 200 OK
+INFO:     192.168.65.1:54847 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:44965 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:51301 - "GET /health HTTP/1.1" 200 OK
+INFO:     Will watch for changes in these directories: ['/app']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [1] using WatchFiles
+INFO:     Started server process [8]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.65.1:47194 - "GET /health HTTP/1.1" 200 OK
+INFO:     192.168.65.1:62865 - "GET /health HTTP/1.1" 200 OK

@@ -65,9 +65,9 @@ Located in `data/synthetic_test_data/`:
 
 | File | Dataset Type | Features | Key Characteristic |
 |------|-------------|----------|-------------------|
-| `cadastral_survey_dwarka.geojson` | `cadastral` | 5 | Source reliability 0.95 |
-| `municipal_gis_dwarka.geojson` | `municipal` | 5 | Source reliability 0.82 |
-| `building_footprints_dwarka.geojson` | `building` | 3 | Source reliability 0.88 |
+| `cadastral_survey_grid.geojson` | `cadastral` | 5 | Source reliability 0.95 |
+| `municipal_gis_grid.geojson` | `municipal` | 5 | Source reliability 0.82 |
+| `building_footprints_grid.geojson` | `building` | 3 | Source reliability 0.88 |
 
 **Designed conflicts**: P-102 (Cadastral, 1,240 m²) vs M-458 (Municipal, 1,256 m²) — 16 m² area discrepancy with slight boundary shift.
 
@@ -82,7 +82,7 @@ Located in `data/synthetic_test_data/`:
 curl -X POST http://localhost:8000/datasets/sample-seed
 ```
 
-Or in the UI: Navigate to `/datasets` → click **"Load Sample Datasets"** in the top header.
+Or in the UI: Navigate to `/datasets` → click **"Load Baseline Datasets"** in the top header.
 
 This runs validate + standardize automatically and seeds all three datasets.
 
@@ -94,18 +94,18 @@ This runs validate + standardize automatically and seeds all three datasets.
 
 ```bash
 curl -X POST "http://localhost:8000/datasets?dataset_type=cadastral" \
-  -F "file=@d:/bhudrishti/data/synthetic_test_data/cadastral_survey_dwarka.geojson"
+  -F "file=@./data/synthetic_test_data/cadastral_survey_grid.geojson"
 
 curl -X POST "http://localhost:8000/datasets?dataset_type=municipal" \
-  -F "file=@d:/bhudrishti/data/synthetic_test_data/municipal_gis_dwarka.geojson"
+  -F "file=@./data/synthetic_test_data/municipal_gis_grid.geojson"
 
 curl -X POST "http://localhost:8000/datasets?dataset_type=building" \
-  -F "file=@d:/bhudrishti/data/synthetic_test_data/building_footprints_dwarka.geojson"
+  -F "file=@./data/synthetic_test_data/building_footprints_grid.geojson"
 ```
 
 Expected response (per dataset):
 ```json
-{"id": 1, "filename": "cadastral_survey_dwarka.geojson", "status": "uploaded", "dataset_type": "cadastral"}
+{"id": 1, "filename": "cadastral_survey_grid.geojson", "status": "uploaded", "dataset_type": "cadastral"}
 ```
 
 #### Step 2: List All Datasets
