@@ -12,12 +12,10 @@ geopandas==0.14.4
 shapely==2.0.6
 pyproj==3.6.1
 fiona==1.10.0  # 1.9.6 fails to build against GDAL 3.10 / GCC 14 (Debian trixie)
+scikit-learn==1.5.1
 
 # Matching / fuzzy
 rapidfuzz==3.9.6
-
-# V2-only, listed for reference (not installed by default in MVP)
-# scikit-learn==1.5.1
 
 # Dev / test
 pytest==8.3.3

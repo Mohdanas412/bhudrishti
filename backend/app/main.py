@@ -8,7 +8,17 @@ services/, which call into engines/. No GIS/matching logic here.
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api import conflicts, datasets, harmonized, matching, reconciliation, reviews
+from app.api import (
+    analytics,
+    conflicts,
+    datasets,
+    geoai,
+    harmonized,
+    matching,
+    reconciliation,
+    reviews,
+    standards,
+)
 from app.db.base import Base
 from app.db.session import engine
 from app.models import (  # noqa: F401  # import so tables register before create_all
@@ -38,6 +48,9 @@ app.include_router(
 )
 app.include_router(reviews.router, prefix="/reviews", tags=["reviews"])
 app.include_router(harmonized.router, prefix="/harmonized", tags=["harmonized"])
+app.include_router(standards.router, prefix="/standards", tags=["standards"])
+app.include_router(geoai.router, prefix="/geoai", tags=["geoai"])
+app.include_router(analytics.router, prefix="/analytics", tags=["analytics"])
 
 
 @app.get("/health")

@@ -108,7 +108,7 @@ export default function LandingPage() {
             <div style={{ background: "var(--bg-surface-subtle)", padding: "16px", borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)" }}>
               <div style={{ fontSize: "11px", fontWeight: "700", color: "var(--color-success)", textTransform: "uppercase", marginBottom: "4px" }}>Source B</div>
               <div style={{ fontSize: "14px", fontWeight: "700", marginBottom: "4px" }}>Municipal Property GIS</div>
-              <div style={{ fontSize: "12px", color: "var(--text-secondary)" }}>1,256 m² • Zone R-2 Dwarka</div>
+              <div style={{ fontSize: "12px", color: "var(--text-secondary)" }}>1,256 m² • Zone R-2</div>
             </div>
 
             <div style={{ background: "var(--bg-surface-subtle)", padding: "16px", borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)" }}>

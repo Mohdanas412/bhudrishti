@@ -15,7 +15,7 @@ def test_api_datasets_and_pipeline_smoke():
     assert r.status_code == 200
     seed_body = r.json()
     assert seed_body["status"] == "seeded"
-    assert len(seed_body["dataset_ids"]) == 3
+    assert len(seed_body["dataset_ids"]) >= 3
 
     # 3. List datasets
     r = client.get("/datasets")

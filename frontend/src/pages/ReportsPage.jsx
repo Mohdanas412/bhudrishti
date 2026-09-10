@@ -80,7 +80,7 @@ export default function ReportsPage() {
             <div style={{ fontSize: "12px", fontWeight: "700", textTransform: "uppercase", color: "var(--text-secondary)" }}>
               Evaluation Extent
             </div>
-            <div style={{ fontSize: "14px", fontWeight: "700" }}>Dwarka Sector 14, New Delhi</div>
+            <div style={{ fontSize: "14px", fontWeight: "700" }}>Pan-India Urban/Rural Pilot Extent</div>
             <div style={{ fontSize: "11.5px", color: "var(--text-muted)" }}>
               Generated: {new Date().toLocaleDateString()}
             </div>
@@ -93,7 +93,7 @@ export default function ReportsPage() {
             1. Executive Summary
           </h3>
           <p style={{ fontSize: "13px", lineHeight: "1.6", color: "var(--text-secondary)" }}>
-            This official harmonization audit report summarizes the automated spatial integration and reconciliation performed on the Dwarka Sector 14 pilot extent. Primary state cadastral survey boundaries were cross-matched with municipal tax assessment parcels and building footprints. All pairwise discrepancies were evaluated against canonical institutional rules, resolving boundary variances and merging non-spatial attributes into a unified authoritative land registry.
+            This official harmonization audit report summarizes the automated spatial integration and reconciliation performed on the authoritative pilot extent. Primary state cadastral survey boundaries were cross-matched with municipal tax assessment parcels and building footprints. All pairwise discrepancies were evaluated against canonical institutional rules, resolving boundary variances and merging non-spatial attributes into a unified authoritative land registry.
           </p>
         </div>
 

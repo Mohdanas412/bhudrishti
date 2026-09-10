@@ -163,6 +163,15 @@ export default function ConflictReviewPage() {
                     <span className={`badge ${isResolved ? "badge-resolved" : "badge-review"}`}>
                       {isResolved ? "Resolved" : "Pending Review"}
                     </span>
+                    <Link
+                      to="/workspace"
+                      state={{ focusFeature: c.feature_a, feature_b: c.feature_b, conflictId: c.id }}
+                      className="btn btn-secondary btn-sm"
+                      style={{ padding: "3px 8px", fontSize: "11px", display: "inline-flex", alignItems: "center", gap: "4px" }}
+                      title="Inspect parcel pair in workspace map"
+                    >
+                      Inspect Map <IconArrowRight size={11} />
+                    </Link>
                   </div>
                 </div>
 
@@ -219,16 +228,25 @@ export default function ConflictReviewPage() {
                           </button>
                           <Link
                             to="/workspace"
-                            state={{ focusFeature: c.feature_a }}
+                            state={{ focusFeature: c.feature_a, feature_b: c.feature_b, conflictId: c.id }}
                             className="btn btn-secondary btn-sm"
                           >
                             Inspect on Map <IconArrowRight size={12} />
                           </Link>
                         </div>
                       ) : (
-                        <div style={{ fontSize: "12px", color: "var(--color-success)", fontWeight: "600", display: "flex", alignItems: "center", gap: "6px" }}>
-                          <IconCheck size={14} />
-                          <span>Certified by Reviewing Officer</span>
+                        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px" }}>
+                          <div style={{ fontSize: "12px", color: "var(--color-success)", fontWeight: "600", display: "flex", alignItems: "center", gap: "6px" }}>
+                            <IconCheck size={14} />
+                            <span>Certified by Reviewing Officer</span>
+                          </div>
+                          <Link
+                            to="/workspace"
+                            state={{ focusFeature: c.feature_a, feature_b: c.feature_b, conflictId: c.id }}
+                            className="btn btn-secondary btn-sm"
+                          >
+                            Inspect on Map <IconArrowRight size={12} />
+                          </Link>
                         </div>
                       )}
                     </div>
